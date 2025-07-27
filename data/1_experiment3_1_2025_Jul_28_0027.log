@@ -1,0 +1,578 @@
+1.6709 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+13.5641 	WARNING 	User requested fullscreen with size [1707 1067], but screen is actually [2560, 1600]. Using actual size
+26.8708 	DATA 	Mouse: Left button down, pos=(1309,757)
+26.8758 	DATA 	Mouse:  Left button up, pos=(1309,757)
+28.5578 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000029E49446198>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x0000029E49493898>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([2560, 1600]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+28.5580 	EXP 	window1: mouseVisible = True
+28.5580 	EXP 	window1: recordFrameIntervals = False
+28.5992 	EXP 	window1: recordFrameIntervals = True
+28.6079 	WARNING 	t of last frame was 4.74ms (=1/210)
+28.6451 	EXP 	window1: recordFrameIntervals = False
+29.2667 	EXP 	Created instru_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='instru_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Any text\n\nincluding line breaks', units='height', win=Window(...), wrapWidth=1)
+29.3263 	EXP 	Created fixation_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='fixation_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+29.3325 	EXP 	Created image_t1 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_t1', opacity=1, ori=0.0, pos=array([0. , 0.1]), size=array([0.27, 0.37]), texRes=128.0, units='height', win=Window(...))
+29.3577 	EXP 	Created slider_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, image='slider.jpg', interpolate=True, mask=None, maskParams=None, name='slider_image', opacity=1, ori=0.0, pos=array([ 0.  , -0.37]), size=array([0.9, 0.1]), texRes=128.0, units='height', win=Window(...))
+29.3982 	EXP 	Created confidence_T1_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='confidence_T1_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='您对刚才的可信度评分有多确定？', units='height', win=Window(...), wrapWidth=1)
+29.4230 	EXP 	Created slider_confidence_t1 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image='slider.jpg', interpolate=True, mask=None, maskParams=None, name='slider_confidence_t1', opacity=1, ori=0.0, pos=array([ 0.  , -0.37]), size=array([0.9, 0.1]), texRes=128.0, units='height', win=Window(...))
+29.4245 	EXP 	Created fixation_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='fixation_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+29.4269 	EXP 	Created image_t2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_t2', opacity=1, ori=0.0, pos=array([0. , 0.1]), size=array([0.27, 0.37]), texRes=128.0, units='height', win=Window(...))
+29.4549 	EXP 	Created slider_image_t2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, image='slider.jpg', interpolate=True, mask=None, maskParams=None, name='slider_image_t2', opacity=1, ori=0.0, pos=array([ 0.  , -0.37]), size=array([0.9, 0.1]), texRes=128.0, units='height', win=Window(...))
+29.4602 	EXP 	Created confidence2_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='confidence2_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='您对刚才的可信度评分有多确定？', units='height', win=Window(...), wrapWidth=1)
+29.4990 	EXP 	Created slider_confidence_t2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image='slider.jpg', interpolate=True, mask=None, maskParams=None, name='slider_confidence_t2', opacity=1, ori=0.0, pos=array([ 0.  , -0.37]), size=array([0.9, 0.1]), texRes=128.0, units='height', win=Window(...))
+29.5453 	EXP 	Created end_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='end_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='感谢您参与本次研究！请按空格键退出。', units='height', win=Window(...), wrapWidth=1)
+29.5794 	EXP 	instru_text: autoDraw = True
+31.3823 	DATA 	Keypress: space
+31.4002 	EXP 	Imported data\temp_trials_1.csv as conditions, 20 conditions, 6 params
+31.4008 	EXP 	Created sequence: random, trialTypes=20, nReps=1, seed=None
+31.4011 	EXP 	New trial (rep=0, index=0): OrderedDict([('condition', 2), ('gender', 'male'), ('high_trust_img', 'stimuli/0-20-6.jpg'), ('identity', 20), ('low_trust_img', 'stimuli/0-20-19.jpg'), ('range', 0.90625)])
+31.4090 	EXP 	instru_text: autoDraw = False
+31.4090 	EXP 	fixation_text: autoDraw = True
+32.4280 	EXP 	fixation_text: autoDraw = False
+32.4280 	EXP 	image_t1: image = 'stimuli/0-20-19.jpg'
+32.4280 	EXP 	image_t1: autoDraw = True
+32.4280 	EXP 	slider_image: autoDraw = True
+36.7169 	DATA 	Mouse: Left button down, pos=(1003,491)
+36.8195 	DATA 	Mouse:  Left button up, pos=(1003,491)
+37.7212 	DATA 	Mouse: Left button down, pos=(1139,261)
+37.8022 	DATA 	Mouse:  Left button up, pos=(1139,261)
+42.6413 	DATA 	Mouse: Left button down, pos=(1139,255)
+42.6424 	DATA 	Mouse:  Left button up, pos=(1139,255)
+45.9124 	DATA 	Keypress: 1
+45.9398 	EXP 	image_t1: autoDraw = False
+45.9398 	EXP 	slider_image: autoDraw = False
+45.9398 	EXP 	confidence_T1_text: autoDraw = True
+45.9398 	EXP 	slider_confidence_t1: autoDraw = True
+49.1810 	DATA 	Keypress: 2
+49.1989 	EXP 	confidence_T1_text: autoDraw = False
+49.1989 	EXP 	slider_confidence_t1: autoDraw = False
+49.1989 	EXP 	fixation_text: autoDraw = True
+50.2190 	EXP 	fixation_text: autoDraw = False
+50.2190 	EXP 	image_t2: image = 'stimuli/0-20-6.jpg'
+50.2190 	EXP 	image_t2: autoDraw = True
+50.2190 	EXP 	slider_image_t2: autoDraw = True
+51.8909 	DATA 	Keypress: 3
+51.9133 	EXP 	image_t2: autoDraw = False
+51.9133 	EXP 	slider_image_t2: autoDraw = False
+51.9133 	EXP 	confidence2_text: autoDraw = True
+51.9133 	EXP 	slider_confidence_t2: autoDraw = True
+53.7267 	DATA 	Keypress: 4
+53.7395 	EXP 	New trial (rep=0, index=1): OrderedDict([('condition', 2), ('gender', 'female'), ('high_trust_img', 'stimuli/1-4-13.jpg'), ('identity', 4), ('low_trust_img', 'stimuli/1-4-6.jpg'), ('range', 2.0)])
+53.7502 	EXP 	confidence2_text: autoDraw = False
+53.7502 	EXP 	slider_confidence_t2: autoDraw = False
+53.7502 	EXP 	fixation_text: autoDraw = True
+54.7561 	EXP 	fixation_text: autoDraw = False
+54.7561 	EXP 	image_t1: image = 'stimuli/1-4-6.jpg'
+54.7561 	EXP 	image_t1: autoDraw = True
+54.7561 	EXP 	slider_image: autoDraw = True
+60.8723 	DATA 	Keypress: 1
+60.8944 	EXP 	image_t1: autoDraw = False
+60.8944 	EXP 	slider_image: autoDraw = False
+60.8944 	EXP 	confidence_T1_text: autoDraw = True
+60.8944 	EXP 	slider_confidence_t1: autoDraw = True
+61.7045 	DATA 	Keypress: 1
+61.7218 	EXP 	confidence_T1_text: autoDraw = False
+61.7218 	EXP 	slider_confidence_t1: autoDraw = False
+61.7218 	EXP 	fixation_text: autoDraw = True
+62.7301 	EXP 	fixation_text: autoDraw = False
+62.7301 	EXP 	image_t2: image = 'stimuli/1-4-13.jpg'
+62.7301 	EXP 	image_t2: autoDraw = True
+62.7301 	EXP 	slider_image_t2: autoDraw = True
+64.9281 	DATA 	Keypress: 2
+64.9363 	EXP 	image_t2: autoDraw = False
+64.9363 	EXP 	slider_image_t2: autoDraw = False
+64.9363 	EXP 	confidence2_text: autoDraw = True
+64.9363 	EXP 	slider_confidence_t2: autoDraw = True
+65.9591 	EXP 	New trial (rep=0, index=2): OrderedDict([('condition', 1), ('gender', 'female'), ('high_trust_img', 'stimuli/1-24-13.jpg'), ('identity', 24), ('low_trust_img', 'stimuli/1-24-5.jpg'), ('range', 1.40625)])
+65.9647 	DATA 	Keypress: 2
+65.9704 	EXP 	confidence2_text: autoDraw = False
+65.9704 	EXP 	slider_confidence_t2: autoDraw = False
+65.9704 	EXP 	fixation_text: autoDraw = True
+66.9798 	EXP 	fixation_text: autoDraw = False
+66.9798 	EXP 	image_t1: image = 'stimuli/1-24-13.jpg'
+66.9798 	EXP 	image_t1: autoDraw = True
+66.9798 	EXP 	slider_image: autoDraw = True
+68.2941 	DATA 	Keypress: 3
+68.3160 	EXP 	image_t1: autoDraw = False
+68.3160 	EXP 	slider_image: autoDraw = False
+68.3160 	EXP 	confidence_T1_text: autoDraw = True
+68.3160 	EXP 	slider_confidence_t1: autoDraw = True
+69.9580 	DATA 	Keypress: 3
+69.9647 	EXP 	confidence_T1_text: autoDraw = False
+69.9647 	EXP 	slider_confidence_t1: autoDraw = False
+69.9647 	EXP 	fixation_text: autoDraw = True
+70.9634 	EXP 	fixation_text: autoDraw = False
+70.9634 	EXP 	image_t2: image = 'stimuli/1-24-5.jpg'
+70.9634 	EXP 	image_t2: autoDraw = True
+70.9634 	EXP 	slider_image_t2: autoDraw = True
+71.3184 	DATA 	Keypress: 4
+71.3255 	EXP 	image_t2: autoDraw = False
+71.3255 	EXP 	slider_image_t2: autoDraw = False
+71.3255 	EXP 	confidence2_text: autoDraw = True
+71.3255 	EXP 	slider_confidence_t2: autoDraw = True
+72.0436 	EXP 	New trial (rep=0, index=3): OrderedDict([('condition', 1), ('gender', 'male'), ('high_trust_img', 'stimuli/0-25-20.jpg'), ('identity', 25), ('low_trust_img', 'stimuli/0-25-13.jpg'), ('range', 1.15625)])
+72.0499 	DATA 	Keypress: 4
+72.0579 	EXP 	confidence2_text: autoDraw = False
+72.0579 	EXP 	slider_confidence_t2: autoDraw = False
+72.0579 	EXP 	fixation_text: autoDraw = True
+73.0708 	EXP 	fixation_text: autoDraw = False
+73.0708 	EXP 	image_t1: image = 'stimuli/0-25-20.jpg'
+73.0708 	EXP 	image_t1: autoDraw = True
+73.0708 	EXP 	slider_image: autoDraw = True
+73.3783 	DATA 	Keypress: 5
+73.3873 	EXP 	image_t1: autoDraw = False
+73.3873 	EXP 	slider_image: autoDraw = False
+73.3873 	EXP 	confidence_T1_text: autoDraw = True
+73.3873 	EXP 	slider_confidence_t1: autoDraw = True
+74.0397 	DATA 	Keypress: 5
+74.0471 	EXP 	confidence_T1_text: autoDraw = False
+74.0471 	EXP 	slider_confidence_t1: autoDraw = False
+74.0471 	EXP 	fixation_text: autoDraw = True
+75.0602 	EXP 	fixation_text: autoDraw = False
+75.0602 	EXP 	image_t2: image = 'stimuli/0-25-13.jpg'
+75.0602 	EXP 	image_t2: autoDraw = True
+75.0602 	EXP 	slider_image_t2: autoDraw = True
+75.3637 	DATA 	Keypress: 6
+75.3733 	EXP 	image_t2: autoDraw = False
+75.3733 	EXP 	slider_image_t2: autoDraw = False
+75.3733 	EXP 	confidence2_text: autoDraw = True
+75.3733 	EXP 	slider_confidence_t2: autoDraw = True
+75.8781 	EXP 	New trial (rep=0, index=4): OrderedDict([('condition', 1), ('gender', 'male'), ('high_trust_img', 'stimuli/0-26-12.jpg'), ('identity', 26), ('low_trust_img', 'stimuli/0-26-3.jpg'), ('range', 1.59375)])
+75.8847 	DATA 	Keypress: 6
+75.8891 	EXP 	confidence2_text: autoDraw = False
+75.8891 	EXP 	slider_confidence_t2: autoDraw = False
+75.8891 	EXP 	fixation_text: autoDraw = True
+76.8907 	EXP 	fixation_text: autoDraw = False
+76.8907 	EXP 	image_t1: image = 'stimuli/0-26-12.jpg'
+76.8907 	EXP 	image_t1: autoDraw = True
+76.8907 	EXP 	slider_image: autoDraw = True
+77.1210 	DATA 	Keypress: 7
+77.1373 	EXP 	image_t1: autoDraw = False
+77.1373 	EXP 	slider_image: autoDraw = False
+77.1373 	EXP 	confidence_T1_text: autoDraw = True
+77.1373 	EXP 	slider_confidence_t1: autoDraw = True
+77.5951 	DATA 	Keypress: 7
+77.5991 	EXP 	confidence_T1_text: autoDraw = False
+77.5991 	EXP 	slider_confidence_t1: autoDraw = False
+77.5991 	EXP 	fixation_text: autoDraw = True
+78.6071 	EXP 	fixation_text: autoDraw = False
+78.6071 	EXP 	image_t2: image = 'stimuli/0-26-3.jpg'
+78.6071 	EXP 	image_t2: autoDraw = True
+78.6071 	EXP 	slider_image_t2: autoDraw = True
+78.7785 	DATA 	Keypress: 8
+78.7827 	EXP 	image_t2: autoDraw = False
+78.7827 	EXP 	slider_image_t2: autoDraw = False
+78.7827 	EXP 	confidence2_text: autoDraw = True
+78.7827 	EXP 	slider_confidence_t2: autoDraw = True
+79.1677 	DATA 	Keypress: 8
+79.1777 	EXP 	New trial (rep=0, index=5): OrderedDict([('condition', 2), ('gender', 'male'), ('high_trust_img', 'stimuli/0-9-3.jpg'), ('identity', 9), ('low_trust_img', 'stimuli/0-9-20.jpg'), ('range', 0.78125)])
+79.1840 	EXP 	confidence2_text: autoDraw = False
+79.1840 	EXP 	slider_confidence_t2: autoDraw = False
+79.1840 	EXP 	fixation_text: autoDraw = True
+80.1936 	EXP 	fixation_text: autoDraw = False
+80.1936 	EXP 	image_t1: image = 'stimuli/0-9-20.jpg'
+80.1936 	EXP 	image_t1: autoDraw = True
+80.1936 	EXP 	slider_image: autoDraw = True
+80.5040 	DATA 	Keypress: 9
+80.5193 	EXP 	image_t1: autoDraw = False
+80.5193 	EXP 	slider_image: autoDraw = False
+80.5193 	EXP 	confidence_T1_text: autoDraw = True
+80.5193 	EXP 	slider_confidence_t1: autoDraw = True
+80.9578 	DATA 	Keypress: 9
+80.9745 	EXP 	confidence_T1_text: autoDraw = False
+80.9745 	EXP 	slider_confidence_t1: autoDraw = False
+80.9745 	EXP 	fixation_text: autoDraw = True
+81.9856 	EXP 	fixation_text: autoDraw = False
+81.9856 	EXP 	image_t2: image = 'stimuli/0-9-3.jpg'
+81.9856 	EXP 	image_t2: autoDraw = True
+81.9856 	EXP 	slider_image_t2: autoDraw = True
+82.3826 	DATA 	Keypress: 0
+88.9326 	DATA 	Keypress: 1
+88.9405 	EXP 	image_t2: autoDraw = False
+88.9405 	EXP 	slider_image_t2: autoDraw = False
+88.9405 	EXP 	confidence2_text: autoDraw = True
+88.9405 	EXP 	slider_confidence_t2: autoDraw = True
+90.3630 	EXP 	New trial (rep=0, index=6): OrderedDict([('condition', 1), ('gender', 'female'), ('high_trust_img', 'stimuli/1-2-3.jpg'), ('identity', 2), ('low_trust_img', 'stimuli/1-2-9.jpg'), ('range', 1.6875)])
+90.3691 	DATA 	Keypress: 1
+90.3766 	EXP 	confidence2_text: autoDraw = False
+90.3766 	EXP 	slider_confidence_t2: autoDraw = False
+90.3766 	EXP 	fixation_text: autoDraw = True
+91.3805 	EXP 	fixation_text: autoDraw = False
+91.3805 	EXP 	image_t1: image = 'stimuli/1-2-3.jpg'
+91.3805 	EXP 	image_t1: autoDraw = True
+91.3805 	EXP 	slider_image: autoDraw = True
+92.2976 	DATA 	Keypress: 1
+92.3166 	EXP 	image_t1: autoDraw = False
+92.3166 	EXP 	slider_image: autoDraw = False
+92.3166 	EXP 	confidence_T1_text: autoDraw = True
+92.3166 	EXP 	slider_confidence_t1: autoDraw = True
+93.7662 	DATA 	Keypress: 1
+93.7717 	EXP 	confidence_T1_text: autoDraw = False
+93.7717 	EXP 	slider_confidence_t1: autoDraw = False
+93.7717 	EXP 	fixation_text: autoDraw = True
+94.7812 	EXP 	fixation_text: autoDraw = False
+94.7812 	EXP 	image_t2: image = 'stimuli/1-2-9.jpg'
+94.7812 	EXP 	image_t2: autoDraw = True
+94.7812 	EXP 	slider_image_t2: autoDraw = True
+95.3297 	DATA 	Keypress: 1
+95.3479 	EXP 	image_t2: autoDraw = False
+95.3479 	EXP 	slider_image_t2: autoDraw = False
+95.3479 	EXP 	confidence2_text: autoDraw = True
+95.3479 	EXP 	slider_confidence_t2: autoDraw = True
+95.8187 	EXP 	New trial (rep=0, index=7): OrderedDict([('condition', 1), ('gender', 'male'), ('high_trust_img', 'stimuli/0-3-4.jpg'), ('identity', 3), ('low_trust_img', 'stimuli/0-3-16.jpg'), ('range', 0.96875)])
+95.8250 	DATA 	Keypress: 1
+95.8312 	EXP 	confidence2_text: autoDraw = False
+95.8312 	EXP 	slider_confidence_t2: autoDraw = False
+95.8312 	EXP 	fixation_text: autoDraw = True
+96.8499 	EXP 	fixation_text: autoDraw = False
+96.8499 	EXP 	image_t1: image = 'stimuli/0-3-4.jpg'
+96.8499 	EXP 	image_t1: autoDraw = True
+96.8499 	EXP 	slider_image: autoDraw = True
+100.8284 	DATA 	Keypress: 2
+100.8464 	EXP 	image_t1: autoDraw = False
+100.8464 	EXP 	slider_image: autoDraw = False
+100.8464 	EXP 	confidence_T1_text: autoDraw = True
+100.8464 	EXP 	slider_confidence_t1: autoDraw = True
+101.0753 	DATA 	Keypress: 2
+101.0921 	EXP 	confidence_T1_text: autoDraw = False
+101.0921 	EXP 	slider_confidence_t1: autoDraw = False
+101.0921 	EXP 	fixation_text: autoDraw = True
+102.1060 	EXP 	fixation_text: autoDraw = False
+102.1060 	EXP 	image_t2: image = 'stimuli/0-3-16.jpg'
+102.1060 	EXP 	image_t2: autoDraw = True
+102.1060 	EXP 	slider_image_t2: autoDraw = True
+102.3532 	DATA 	Keypress: 3
+102.3577 	EXP 	image_t2: autoDraw = False
+102.3577 	EXP 	slider_image_t2: autoDraw = False
+102.3577 	EXP 	confidence2_text: autoDraw = True
+102.3577 	EXP 	slider_confidence_t2: autoDraw = True
+102.6058 	DATA 	Keypress: 3
+102.6160 	EXP 	New trial (rep=0, index=8): OrderedDict([('condition', 2), ('gender', 'male'), ('high_trust_img', 'stimuli/0-18-9.jpg'), ('identity', 18), ('low_trust_img', 'stimuli/0-18-18.jpg'), ('range', 1.1875)])
+102.6241 	EXP 	confidence2_text: autoDraw = False
+102.6241 	EXP 	slider_confidence_t2: autoDraw = False
+102.6241 	EXP 	fixation_text: autoDraw = True
+103.6332 	EXP 	fixation_text: autoDraw = False
+103.6332 	EXP 	image_t1: image = 'stimuli/0-18-18.jpg'
+103.6332 	EXP 	image_t1: autoDraw = True
+103.6332 	EXP 	slider_image: autoDraw = True
+103.7424 	DATA 	Keypress: 4
+103.7604 	EXP 	image_t1: autoDraw = False
+103.7604 	EXP 	slider_image: autoDraw = False
+103.7604 	EXP 	confidence_T1_text: autoDraw = True
+103.7604 	EXP 	slider_confidence_t1: autoDraw = True
+103.8965 	DATA 	Keypress: 4
+103.9007 	EXP 	confidence_T1_text: autoDraw = False
+103.9007 	EXP 	slider_confidence_t1: autoDraw = False
+103.9007 	EXP 	fixation_text: autoDraw = True
+104.9072 	EXP 	fixation_text: autoDraw = False
+104.9072 	EXP 	image_t2: image = 'stimuli/0-18-9.jpg'
+104.9072 	EXP 	image_t2: autoDraw = True
+104.9072 	EXP 	slider_image_t2: autoDraw = True
+105.1209 	DATA 	Keypress: 5
+105.1414 	EXP 	image_t2: autoDraw = False
+105.1414 	EXP 	slider_image_t2: autoDraw = False
+105.1414 	EXP 	confidence2_text: autoDraw = True
+105.1414 	EXP 	slider_confidence_t2: autoDraw = True
+105.9020 	EXP 	New trial (rep=0, index=9): OrderedDict([('condition', 1), ('gender', 'female'), ('high_trust_img', 'stimuli/1-8-11.jpg'), ('identity', 8), ('low_trust_img', 'stimuli/1-8-15.jpg'), ('range', 1.375)])
+105.9075 	DATA 	Keypress: 5
+105.9125 	EXP 	confidence2_text: autoDraw = False
+105.9125 	EXP 	slider_confidence_t2: autoDraw = False
+105.9125 	EXP 	fixation_text: autoDraw = True
+106.9209 	EXP 	fixation_text: autoDraw = False
+106.9209 	EXP 	image_t1: image = 'stimuli/1-8-11.jpg'
+106.9209 	EXP 	image_t1: autoDraw = True
+106.9209 	EXP 	slider_image: autoDraw = True
+107.1539 	DATA 	Keypress: 6
+107.1785 	EXP 	image_t1: autoDraw = False
+107.1785 	EXP 	slider_image: autoDraw = False
+107.1785 	EXP 	confidence_T1_text: autoDraw = True
+107.1785 	EXP 	slider_confidence_t1: autoDraw = True
+108.0167 	DATA 	Keypress: 7
+108.0209 	EXP 	confidence_T1_text: autoDraw = False
+108.0209 	EXP 	slider_confidence_t1: autoDraw = False
+108.0209 	EXP 	fixation_text: autoDraw = True
+109.0334 	EXP 	fixation_text: autoDraw = False
+109.0334 	EXP 	image_t2: image = 'stimuli/1-8-15.jpg'
+109.0334 	EXP 	image_t2: autoDraw = True
+109.0334 	EXP 	slider_image_t2: autoDraw = True
+110.0642 	DATA 	Keypress: 7
+110.0686 	EXP 	image_t2: autoDraw = False
+110.0686 	EXP 	slider_image_t2: autoDraw = False
+110.0686 	EXP 	confidence2_text: autoDraw = True
+110.0686 	EXP 	slider_confidence_t2: autoDraw = True
+110.4024 	DATA 	Keypress: 7
+110.4121 	EXP 	New trial (rep=0, index=10): OrderedDict([('condition', 2), ('gender', 'male'), ('high_trust_img', 'stimuli/0-15-4.jpg'), ('identity', 15), ('low_trust_img', 'stimuli/0-15-18.jpg'), ('range', 1.1875)])
+110.4189 	EXP 	confidence2_text: autoDraw = False
+110.4189 	EXP 	slider_confidence_t2: autoDraw = False
+110.4189 	EXP 	fixation_text: autoDraw = True
+111.4247 	EXP 	fixation_text: autoDraw = False
+111.4247 	EXP 	image_t1: image = 'stimuli/0-15-18.jpg'
+111.4247 	EXP 	image_t1: autoDraw = True
+111.4247 	EXP 	slider_image: autoDraw = True
+111.6596 	DATA 	Keypress: 8
+111.6770 	EXP 	image_t1: autoDraw = False
+111.6770 	EXP 	slider_image: autoDraw = False
+111.6770 	EXP 	confidence_T1_text: autoDraw = True
+111.6770 	EXP 	slider_confidence_t1: autoDraw = True
+111.9903 	DATA 	Keypress: 8
+112.0076 	EXP 	confidence_T1_text: autoDraw = False
+112.0076 	EXP 	slider_confidence_t1: autoDraw = False
+112.0076 	EXP 	fixation_text: autoDraw = True
+113.0152 	EXP 	fixation_text: autoDraw = False
+113.0152 	EXP 	image_t2: image = 'stimuli/0-15-4.jpg'
+113.0152 	EXP 	image_t2: autoDraw = True
+113.0152 	EXP 	slider_image_t2: autoDraw = True
+113.2993 	DATA 	Keypress: 9
+113.3040 	EXP 	image_t2: autoDraw = False
+113.3040 	EXP 	slider_image_t2: autoDraw = False
+113.3040 	EXP 	confidence2_text: autoDraw = True
+113.3040 	EXP 	slider_confidence_t2: autoDraw = True
+113.6334 	DATA 	Keypress: 9
+113.6434 	EXP 	New trial (rep=0, index=11): OrderedDict([('condition', 2), ('gender', 'female'), ('high_trust_img', 'stimuli/1-7-18.jpg'), ('identity', 7), ('low_trust_img', 'stimuli/1-7-1.jpg'), ('range', 1.46875)])
+113.6503 	EXP 	confidence2_text: autoDraw = False
+113.6503 	EXP 	slider_confidence_t2: autoDraw = False
+113.6503 	EXP 	fixation_text: autoDraw = True
+114.6596 	EXP 	fixation_text: autoDraw = False
+114.6596 	EXP 	image_t1: image = 'stimuli/1-7-1.jpg'
+114.6596 	EXP 	image_t1: autoDraw = True
+114.6596 	EXP 	slider_image: autoDraw = True
+138.1108 	DATA 	Keypress: 8
+138.1300 	EXP 	image_t1: autoDraw = False
+138.1300 	EXP 	slider_image: autoDraw = False
+138.1300 	EXP 	confidence_T1_text: autoDraw = True
+138.1300 	EXP 	slider_confidence_t1: autoDraw = True
+138.7094 	DATA 	Keypress: 8
+138.7155 	EXP 	confidence_T1_text: autoDraw = False
+138.7155 	EXP 	slider_confidence_t1: autoDraw = False
+138.7155 	EXP 	fixation_text: autoDraw = True
+139.7219 	EXP 	fixation_text: autoDraw = False
+139.7219 	EXP 	image_t2: image = 'stimuli/1-7-18.jpg'
+139.7219 	EXP 	image_t2: autoDraw = True
+139.7219 	EXP 	slider_image_t2: autoDraw = True
+142.4795 	DATA 	Keypress: 9
+142.4985 	EXP 	image_t2: autoDraw = False
+142.4985 	EXP 	slider_image_t2: autoDraw = False
+142.4985 	EXP 	confidence2_text: autoDraw = True
+142.4985 	EXP 	slider_confidence_t2: autoDraw = True
+143.1442 	DATA 	Keypress: 9
+143.1545 	EXP 	New trial (rep=0, index=12): OrderedDict([('condition', 1), ('gender', 'male'), ('high_trust_img', 'stimuli/0-17-11.jpg'), ('identity', 17), ('low_trust_img', 'stimuli/0-17-3.jpg'), ('range', 0.6875)])
+143.1611 	EXP 	confidence2_text: autoDraw = False
+143.1611 	EXP 	slider_confidence_t2: autoDraw = False
+143.1611 	EXP 	fixation_text: autoDraw = True
+144.1725 	EXP 	fixation_text: autoDraw = False
+144.1725 	EXP 	image_t1: image = 'stimuli/0-17-11.jpg'
+144.1725 	EXP 	image_t1: autoDraw = True
+144.1725 	EXP 	slider_image: autoDraw = True
+144.8094 	DATA 	Keypress: 9
+144.8278 	EXP 	image_t1: autoDraw = False
+144.8278 	EXP 	slider_image: autoDraw = False
+144.8278 	EXP 	confidence_T1_text: autoDraw = True
+144.8278 	EXP 	slider_confidence_t1: autoDraw = True
+145.4219 	DATA 	Keypress: 9
+145.4284 	EXP 	confidence_T1_text: autoDraw = False
+145.4284 	EXP 	slider_confidence_t1: autoDraw = False
+145.4284 	EXP 	fixation_text: autoDraw = True
+146.4382 	EXP 	fixation_text: autoDraw = False
+146.4382 	EXP 	image_t2: image = 'stimuli/0-17-3.jpg'
+146.4382 	EXP 	image_t2: autoDraw = True
+146.4382 	EXP 	slider_image_t2: autoDraw = True
+146.8724 	DATA 	Keypress: 9
+146.8902 	EXP 	image_t2: autoDraw = False
+146.8902 	EXP 	slider_image_t2: autoDraw = False
+146.8902 	EXP 	confidence2_text: autoDraw = True
+146.8902 	EXP 	slider_confidence_t2: autoDraw = True
+147.4981 	DATA 	Keypress: 9
+147.5084 	EXP 	New trial (rep=0, index=13): OrderedDict([('condition', 2), ('gender', 'male'), ('high_trust_img', 'stimuli/0-10-6.jpg'), ('identity', 10), ('low_trust_img', 'stimuli/0-10-13.jpg'), ('range', 1.8125)])
+147.5158 	EXP 	confidence2_text: autoDraw = False
+147.5158 	EXP 	slider_confidence_t2: autoDraw = False
+147.5158 	EXP 	fixation_text: autoDraw = True
+148.5322 	EXP 	fixation_text: autoDraw = False
+148.5322 	EXP 	image_t1: image = 'stimuli/0-10-13.jpg'
+148.5322 	EXP 	image_t1: autoDraw = True
+148.5322 	EXP 	slider_image: autoDraw = True
+149.0519 	DATA 	Keypress: 9
+149.0600 	EXP 	image_t1: autoDraw = False
+149.0600 	EXP 	slider_image: autoDraw = False
+149.0600 	EXP 	confidence_T1_text: autoDraw = True
+149.0600 	EXP 	slider_confidence_t1: autoDraw = True
+149.6157 	DATA 	Keypress: 9
+149.6237 	EXP 	confidence_T1_text: autoDraw = False
+149.6237 	EXP 	slider_confidence_t1: autoDraw = False
+149.6237 	EXP 	fixation_text: autoDraw = True
+150.6241 	EXP 	fixation_text: autoDraw = False
+150.6241 	EXP 	image_t2: image = 'stimuli/0-10-6.jpg'
+150.6241 	EXP 	image_t2: autoDraw = True
+150.6241 	EXP 	slider_image_t2: autoDraw = True
+151.1563 	DATA 	Keypress: 8
+151.1610 	EXP 	image_t2: autoDraw = False
+151.1610 	EXP 	slider_image_t2: autoDraw = False
+151.1610 	EXP 	confidence2_text: autoDraw = True
+151.1610 	EXP 	slider_confidence_t2: autoDraw = True
+151.5904 	DATA 	Keypress: 8
+151.5997 	EXP 	New trial (rep=0, index=14): OrderedDict([('condition', 2), ('gender', 'female'), ('high_trust_img', 'stimuli/1-16-2.jpg'), ('identity', 16), ('low_trust_img', 'stimuli/1-16-1.jpg'), ('range', 1.5)])
+151.6070 	EXP 	confidence2_text: autoDraw = False
+151.6070 	EXP 	slider_confidence_t2: autoDraw = False
+151.6070 	EXP 	fixation_text: autoDraw = True
+152.6175 	EXP 	fixation_text: autoDraw = False
+152.6175 	EXP 	image_t1: image = 'stimuli/1-16-1.jpg'
+152.6175 	EXP 	image_t1: autoDraw = True
+152.6175 	EXP 	slider_image: autoDraw = True
+153.0769 	DATA 	Keypress: 7
+153.0826 	EXP 	image_t1: autoDraw = False
+153.0826 	EXP 	slider_image: autoDraw = False
+153.0826 	EXP 	confidence_T1_text: autoDraw = True
+153.0826 	EXP 	slider_confidence_t1: autoDraw = True
+153.5446 	DATA 	Keypress: 7
+153.5484 	EXP 	confidence_T1_text: autoDraw = False
+153.5484 	EXP 	slider_confidence_t1: autoDraw = False
+153.5484 	EXP 	fixation_text: autoDraw = True
+154.5595 	EXP 	fixation_text: autoDraw = False
+154.5595 	EXP 	image_t2: image = 'stimuli/1-16-2.jpg'
+154.5595 	EXP 	image_t2: autoDraw = True
+154.5595 	EXP 	slider_image_t2: autoDraw = True
+154.9971 	DATA 	Keypress: 6
+155.0164 	EXP 	image_t2: autoDraw = False
+155.0164 	EXP 	slider_image_t2: autoDraw = False
+155.0164 	EXP 	confidence2_text: autoDraw = True
+155.0164 	EXP 	slider_confidence_t2: autoDraw = True
+155.3926 	DATA 	Keypress: 6
+155.4048 	EXP 	New trial (rep=0, index=15): OrderedDict([('condition', 1), ('gender', 'female'), ('high_trust_img', 'stimuli/1-22-1.jpg'), ('identity', 22), ('low_trust_img', 'stimuli/1-22-8.jpg'), ('range', 0.6875)])
+155.4131 	EXP 	confidence2_text: autoDraw = False
+155.4131 	EXP 	slider_confidence_t2: autoDraw = False
+155.4131 	EXP 	fixation_text: autoDraw = True
+156.4276 	EXP 	fixation_text: autoDraw = False
+156.4276 	EXP 	image_t1: image = 'stimuli/1-22-1.jpg'
+156.4276 	EXP 	image_t1: autoDraw = True
+156.4276 	EXP 	slider_image: autoDraw = True
+157.3052 	DATA 	Keypress: 5
+157.3096 	EXP 	image_t1: autoDraw = False
+157.3096 	EXP 	slider_image: autoDraw = False
+157.3096 	EXP 	confidence_T1_text: autoDraw = True
+157.3096 	EXP 	slider_confidence_t1: autoDraw = True
+157.6880 	DATA 	Keypress: 5
+157.7039 	EXP 	confidence_T1_text: autoDraw = False
+157.7039 	EXP 	slider_confidence_t1: autoDraw = False
+157.7039 	EXP 	fixation_text: autoDraw = True
+158.7179 	EXP 	fixation_text: autoDraw = False
+158.7179 	EXP 	image_t2: image = 'stimuli/1-22-8.jpg'
+158.7179 	EXP 	image_t2: autoDraw = True
+158.7179 	EXP 	slider_image_t2: autoDraw = True
+159.2465 	DATA 	Keypress: 5
+159.2510 	EXP 	image_t2: autoDraw = False
+159.2510 	EXP 	slider_image_t2: autoDraw = False
+159.2510 	EXP 	confidence2_text: autoDraw = True
+159.2510 	EXP 	slider_confidence_t2: autoDraw = True
+159.6887 	DATA 	Keypress: 5
+159.6992 	EXP 	New trial (rep=0, index=16): OrderedDict([('condition', 1), ('gender', 'male'), ('high_trust_img', 'stimuli/0-6-11.jpg'), ('identity', 6), ('low_trust_img', 'stimuli/0-6-1.jpg'), ('range', 1.53125)])
+159.7086 	EXP 	confidence2_text: autoDraw = False
+159.7086 	EXP 	slider_confidence_t2: autoDraw = False
+159.7086 	EXP 	fixation_text: autoDraw = True
+160.7226 	EXP 	fixation_text: autoDraw = False
+160.7226 	EXP 	image_t1: image = 'stimuli/0-6-11.jpg'
+160.7226 	EXP 	image_t1: autoDraw = True
+160.7226 	EXP 	slider_image: autoDraw = True
+161.1241 	DATA 	Keypress: 5
+161.1418 	EXP 	image_t1: autoDraw = False
+161.1418 	EXP 	slider_image: autoDraw = False
+161.1418 	EXP 	confidence_T1_text: autoDraw = True
+161.1418 	EXP 	slider_confidence_t1: autoDraw = True
+161.4908 	DATA 	Keypress: 5
+161.5081 	EXP 	confidence_T1_text: autoDraw = False
+161.5081 	EXP 	slider_confidence_t1: autoDraw = False
+161.5081 	EXP 	fixation_text: autoDraw = True
+162.5186 	EXP 	fixation_text: autoDraw = False
+162.5186 	EXP 	image_t2: image = 'stimuli/0-6-1.jpg'
+162.5186 	EXP 	image_t2: autoDraw = True
+162.5186 	EXP 	slider_image_t2: autoDraw = True
+162.7639 	DATA 	Keypress: 6
+162.7695 	EXP 	image_t2: autoDraw = False
+162.7695 	EXP 	slider_image_t2: autoDraw = False
+162.7695 	EXP 	confidence2_text: autoDraw = True
+162.7695 	EXP 	slider_confidence_t2: autoDraw = True
+163.1617 	DATA 	Keypress: 6
+163.1731 	EXP 	New trial (rep=0, index=17): OrderedDict([('condition', 2), ('gender', 'female'), ('high_trust_img', 'stimuli/1-23-19.jpg'), ('identity', 23), ('low_trust_img', 'stimuli/1-23-8.jpg'), ('range', 1.28125)])
+163.1813 	EXP 	confidence2_text: autoDraw = False
+163.1813 	EXP 	slider_confidence_t2: autoDraw = False
+163.1813 	EXP 	fixation_text: autoDraw = True
+164.1900 	EXP 	fixation_text: autoDraw = False
+164.1900 	EXP 	image_t1: image = 'stimuli/1-23-8.jpg'
+164.1900 	EXP 	image_t1: autoDraw = True
+164.1900 	EXP 	slider_image: autoDraw = True
+164.5100 	DATA 	Keypress: 7
+164.5303 	EXP 	image_t1: autoDraw = False
+164.5303 	EXP 	slider_image: autoDraw = False
+164.5303 	EXP 	confidence_T1_text: autoDraw = True
+164.5303 	EXP 	slider_confidence_t1: autoDraw = True
+164.8532 	DATA 	Keypress: 7
+164.8701 	EXP 	confidence_T1_text: autoDraw = False
+164.8701 	EXP 	slider_confidence_t1: autoDraw = False
+164.8701 	EXP 	fixation_text: autoDraw = True
+165.8774 	EXP 	fixation_text: autoDraw = False
+165.8774 	EXP 	image_t2: image = 'stimuli/1-23-19.jpg'
+165.8774 	EXP 	image_t2: autoDraw = True
+165.8774 	EXP 	slider_image_t2: autoDraw = True
+166.1310 	DATA 	Keypress: 8
+166.1351 	EXP 	image_t2: autoDraw = False
+166.1351 	EXP 	slider_image_t2: autoDraw = False
+166.1351 	EXP 	confidence2_text: autoDraw = True
+166.1351 	EXP 	slider_confidence_t2: autoDraw = True
+166.5211 	DATA 	Keypress: 8
+166.5306 	EXP 	New trial (rep=0, index=18): OrderedDict([('condition', 1), ('gender', 'female'), ('high_trust_img', 'stimuli/1-21-18.jpg'), ('identity', 21), ('low_trust_img', 'stimuli/1-21-2.jpg'), ('range', 1.6875)])
+166.5378 	EXP 	confidence2_text: autoDraw = False
+166.5378 	EXP 	slider_confidence_t2: autoDraw = False
+166.5378 	EXP 	fixation_text: autoDraw = True
+167.5483 	EXP 	fixation_text: autoDraw = False
+167.5483 	EXP 	image_t1: image = 'stimuli/1-21-18.jpg'
+167.5483 	EXP 	image_t1: autoDraw = True
+167.5483 	EXP 	slider_image: autoDraw = True
+167.7365 	DATA 	Keypress: 7
+167.7571 	EXP 	image_t1: autoDraw = False
+167.7571 	EXP 	slider_image: autoDraw = False
+167.7571 	EXP 	confidence_T1_text: autoDraw = True
+167.7571 	EXP 	slider_confidence_t1: autoDraw = True
+168.0369 	DATA 	Keypress: 7
+168.0581 	EXP 	confidence_T1_text: autoDraw = False
+168.0581 	EXP 	slider_confidence_t1: autoDraw = False
+168.0581 	EXP 	fixation_text: autoDraw = True
+169.0702 	EXP 	fixation_text: autoDraw = False
+169.0702 	EXP 	image_t2: image = 'stimuli/1-21-2.jpg'
+169.0702 	EXP 	image_t2: autoDraw = True
+169.0702 	EXP 	slider_image_t2: autoDraw = True
+169.2571 	DATA 	Keypress: 1
+169.2763 	EXP 	image_t2: autoDraw = False
+169.2763 	EXP 	slider_image_t2: autoDraw = False
+169.2763 	EXP 	confidence2_text: autoDraw = True
+169.2763 	EXP 	slider_confidence_t2: autoDraw = True
+169.9829 	EXP 	New trial (rep=0, index=19): OrderedDict([('condition', 2), ('gender', 'female'), ('high_trust_img', 'stimuli/1-14-7.jpg'), ('identity', 14), ('low_trust_img', 'stimuli/1-14-10.jpg'), ('range', 0.875)])
+169.9887 	DATA 	Keypress: 1
+169.9939 	EXP 	confidence2_text: autoDraw = False
+169.9939 	EXP 	slider_confidence_t2: autoDraw = False
+169.9939 	EXP 	fixation_text: autoDraw = True
+171.0035 	EXP 	fixation_text: autoDraw = False
+171.0035 	EXP 	image_t1: image = 'stimuli/1-14-10.jpg'
+171.0035 	EXP 	image_t1: autoDraw = True
+171.0035 	EXP 	slider_image: autoDraw = True
+171.2542 	DATA 	Keypress: 2
+171.2742 	EXP 	image_t1: autoDraw = False
+171.2742 	EXP 	slider_image: autoDraw = False
+171.2742 	EXP 	confidence_T1_text: autoDraw = True
+171.2742 	EXP 	slider_confidence_t1: autoDraw = True
+171.5976 	DATA 	Keypress: 2
+171.6145 	EXP 	confidence_T1_text: autoDraw = False
+171.6145 	EXP 	slider_confidence_t1: autoDraw = False
+171.6145 	EXP 	fixation_text: autoDraw = True
+172.6287 	EXP 	fixation_text: autoDraw = False
+172.6287 	EXP 	image_t2: image = 'stimuli/1-14-7.jpg'
+172.6287 	EXP 	image_t2: autoDraw = True
+172.6287 	EXP 	slider_image_t2: autoDraw = True
+172.7494 	DATA 	Keypress: 3
+172.7687 	EXP 	image_t2: autoDraw = False
+172.7687 	EXP 	slider_image_t2: autoDraw = False
+172.7687 	EXP 	confidence2_text: autoDraw = True
+172.7687 	EXP 	slider_confidence_t2: autoDraw = True
+173.1469 	DATA 	Keypress: 3
+173.1674 	EXP 	confidence2_text: autoDraw = False
+173.1674 	EXP 	slider_confidence_t2: autoDraw = False
+173.1674 	EXP 	end_text: autoDraw = True
+175.4538 	DATA 	Keypress: space
+175.4664 	EXP 	end_text: autoDraw = False
+175.5324 	EXP 	window1: mouseVisible = True

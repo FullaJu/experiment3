@@ -53,8 +53,9 @@ psychoJS.start({
   expInfo: expInfo,
   resources: [
     {'name': 'all_faces.xlsx', 'path': 'all_faces.xlsx'},
+    {'name': 'blank.png', 'path': 'blank.png'},
     {'name': 'slider.jpg', 'path': 'slider.jpg'},
-    {'name': 'blank.png', 'path': 'blank.png'}
+    {'name': 'all_faces.json', 'path': 'all_faces.json'}
   ]
 });
 
@@ -84,7 +85,11 @@ async function updateInfo() {
 
 var instructionClock;
 var instru_text;
+var trials_data;
 var instru_key_resp;
+var block_instruClock;
+var block_instr_text;
+var block_key_resp;
 var fixationClock;
 var fixation_text;
 var image1Clock;
@@ -122,108 +127,126 @@ async function experimentInit() {
     depth: 0.0 
   });
   
-  // 定义当前图像变量
-  let current_img = "blank.png";
+  // 初始化全局变量
+  var current_img = "blank.png";
   
-  // 异步函数加载 Excel 文件
-  async function loadExcelFile() {
-      try {
-          // 在 PsychoJS 中，Excel 文件会被预先转换为 JSON
-          // 所以我们直接请求 JSON 文件
-          // 注意：Pavlovia 会自动将您的 Excel 文件转换为 JSON
-          const response = await fetch('all_faces.xlsx.json');
-          const json_data = await response.json();
+  // 读取刺激列表 - 在线上实验中，您需要确保Excel文件已转换为JSON格式
+  // 假设您已经将all_faces.xlsx转换为JSON格式并通过资源加载
+  var faces_df = []; // 这里应该是您的面孔数据
+  
+  // 如果使用JSON文件，可以通过以下方式加载：
+  // faces_df = require('all_faces.json'); // 或其他加载方式
+  
+  // 分离男性和女性面孔
+  var male_faces = faces_df.filter(face => face.gender === 'male')
+                          .sort((a, b) => b.range - a.range); // 按range降序排列
+  var female_faces = faces_df.filter(face => face.gender === 'female')
+                            .sort((a, b) => b.range - a.range); // 按range降序排列
+  
+  // 获取参与者编号
+  var participant_id = parseInt(expInfo["编号*"]);
+  
+  // 初始化存储trials数据的数组
+  var trials_data = [];
+  
+  // 处理男性面孔
+  for (let i = 0; i < male_faces.length; i += 2) {
+      if (i + 1 < male_faces.length) { // 确保有配对的人物
+          var face1 = male_faces[i];
+          var face2 = male_faces[i + 1];
           
-          // 处理数据
-          processData(json_data);
-      } catch (error) {
-          console.error("加载数据失败:", error);
+          // 根据被试编号和配对索引决定分配方式
+          if ((participant_id + Math.floor(i/2)) % 2 === 0) {
+              // 人物1到条件1，人物2到条件2
+              trials_data.push({...face1, condition: 1});
+              trials_data.push({...face2, condition: 2});
+          } else {
+              // 人物1到条件2，人物2到条件1
+              trials_data.push({...face1, condition: 2});
+              trials_data.push({...face2, condition: 1});
+          }
       }
   }
   
-  // 处理数据的函数
-  function processData(faces_data) {
-      // 从数据中提取所有人物 ID 列表
-      const all_persons = faces_data.map(row => row.identity);
-      
-      // 随机打乱人物顺序
-      shuffleArray(all_persons);
-      
-      // 将一半人物分配给顺序1(高→低)，一半分配给顺序2(低→高)
-      const half = Math.ceil(all_persons.length / 2);
-      const condition1_persons = all_persons.slice(0, 3);  // 前N个人物分配到条件1
-      const condition2_persons = all_persons.slice(3);     // 后N个人物分配到条件2
-      
-      // 创建一个新的数组，包含人物ID和对应的条件
-      let trials_data = [];
-      
-      // 添加条件1的人物(高→低)
-      for (let i = 0; i < condition1_persons.length; i++) {
-          const person = condition1_persons[i];
-          const person_data = faces_data.find(row => row.identity === person);
-          if (person_data) {
-              const trial_data = {...person_data};  // 创建副本
-              trial_data.condition = 1;
-              trials_data.push(trial_data);
+  // 处理女性面孔，使用相同的逻辑
+  for (let i = 0; i < female_faces.length; i += 2) {
+      if (i + 1 < female_faces.length) { // 确保有配对的人物
+          var face1 = female_faces[i];
+          var face2 = female_faces[i + 1];
+          
+          // 根据被试编号和配对索引决定分配方式
+          if ((participant_id + Math.floor(i/2)) % 2 === 0) {
+              trials_data.push({...face1, condition: 1});
+              trials_data.push({...face2, condition: 2});
+          } else {
+              trials_data.push({...face1, condition: 2});
+              trials_data.push({...face2, condition: 1});
           }
       }
-      
-      // 添加条件2的人物(低→高)
-      for (let i = 0; i < condition2_persons.length; i++) {
-          const person = condition2_persons[i];
-          const person_data = faces_data.find(row => row.identity === person);
-          if (person_data) {
-              const trial_data = {...person_data};  // 创建副本
-              trial_data.condition = 2;
-              trials_data.push(trial_data);
-          }
-      }
-      
-      // 再次随机化试次顺序
-      shuffleArray(trials_data);
-      
-      // 在 PsychoJS 中，我们不需要保存临时文件
-      // 相反，我们直接将试次数据存储在全局变量中
-      psychoJS.experiment.addData('trials_data', JSON.stringify(trials_data));
-      
-      // 创建一个 Loop 对象
-      createLoop(trials_data);
   }
   
-  // 随机打乱数组的辅助函数
+  // 随机化试次顺序
   function shuffleArray(array) {
-      for (let i = array.length - 1; i > 0; i--) {
+      var shuffled = [...array];
+      for (let i = shuffled.length - 1; i > 0; i--) {
           const j = Math.floor(Math.random() * (i + 1));
-          [array[i], array[j]] = [array[j], array[i]];
+          [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
       }
-      return array;
+      return shuffled;
   }
   
-  // 创建试验循环
-  function createLoop(trials_data) {
-      // 在 PsychoJS 中，我们使用 TrialHandler 对象创建循环
-      // 这部分在 PsychoJS 中已经自动处理，如果您使用 PsychoPy Builder
-      // 但如果您需要手动处理，可以使用下面的代码
-      
-      // 将试次数据存储在 psychoJS 对象中，以便后续使用
-      psychoJS.experiment.addData('trials_list', trials_data);
-      
-      // 创建全局字典存储 T1 评分，以便在 T2 使用
-      window.T1_ratings = {};
-  }
+  trials_data = shuffleArray(trials_data);
   
-  // 在实验开始时执行
-  function initExperiment() {
-      // 获取参与者信息
-      const expInfo = psychoJS.experiment.extraInfo;
-      
-      // 加载数据
-      loadExcelFile();
-  }
+  // 检查两个条件下的性别平衡情况
+  var condition1 = trials_data.filter(trial => trial.condition === 1);
+  var condition2 = trials_data.filter(trial => trial.condition === 2);
   
-  // 当文档加载完成时初始化实验
-  document.addEventListener('DOMContentLoaded', initExperiment);
+  // 计算性别分布
+  var condition1_male = condition1.filter(trial => trial.gender === 'male').length;
+  var condition1_female = condition1.filter(trial => trial.gender === 'female').length;
+  var condition2_male = condition2.filter(trial => trial.gender === 'male').length;
+  var condition2_female = condition2.filter(trial => trial.gender === 'female').length;
+  
+  // 计算平均range
+  var condition1_avg_range = condition1.reduce((sum, trial) => sum + trial.range, 0) / condition1.length;
+  var condition2_avg_range = condition2.reduce((sum, trial) => sum + trial.range, 0) / condition2.length;
+  
+  // 打印平衡检查结果（在线上实验中可能需要使用console.log）
+  console.log(`条件1: 男性 = ${condition1_male}, 女性 = ${condition1_female}`);
+  console.log(`条件2: 男性 = ${condition2_male}, 女性 = ${condition2_female}`);
+  console.log(`条件1 平均range: ${condition1_avg_range.toFixed(2)}`);
+  console.log(`条件2 平均range: ${condition2_avg_range.toFixed(2)}`);
+  
+  // 在线上实验中，您可能需要将数据存储在全局变量中而不是文件
+  // 设置全局变量供后续使用
+  psychoJS.experiment.extraInfo['trials_data'] = trials_data;
+  
+  // 创建全局字典存储评分和确定性
+  var T1_ratings = {};
+  var T1_confidence = {};
+  
+  // 如果需要创建TrialHandler，可以使用以下方式：
+  // var trialHandler = new data.TrialHandler({
+  //     trialList: trials_data,
+  //     nReps: 1,
+  //     method: data.TrialHandler.Method.SEQUENTIAL
+  // });
   instru_key_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  // Initialize components for Routine "block_instru"
+  block_instruClock = new util.Clock();
+  block_instr_text = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'block_instr_text',
+    text: '下面是另一位人物',
+    font: 'Open Sans',
+    units: undefined, 
+    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0.0,
+    color: new util.Color('white'),  opacity: undefined,
+    depth: 0.0 
+  });
+  
+  block_key_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
   // Initialize components for Routine "fixation"
   fixationClock = new util.Clock();
@@ -498,12 +521,18 @@ function trialsLoopBegin(trialsLoopScheduler, snapshot) {
       const snapshot = trials.getSnapshot();
     
       trialsLoopScheduler.add(importConditions(snapshot));
+      trialsLoopScheduler.add(block_instruRoutineBegin(snapshot));
+      trialsLoopScheduler.add(block_instruRoutineEachFrame());
+      trialsLoopScheduler.add(block_instruRoutineEnd());
       trialsLoopScheduler.add(fixationRoutineBegin(snapshot));
       trialsLoopScheduler.add(fixationRoutineEachFrame());
       trialsLoopScheduler.add(fixationRoutineEnd());
       trialsLoopScheduler.add(image1RoutineBegin(snapshot));
       trialsLoopScheduler.add(image1RoutineEachFrame());
       trialsLoopScheduler.add(image1RoutineEnd());
+      trialsLoopScheduler.add(fixationRoutineBegin(snapshot));
+      trialsLoopScheduler.add(fixationRoutineEachFrame());
+      trialsLoopScheduler.add(fixationRoutineEnd());
       trialsLoopScheduler.add(confidence_1RoutineBegin(snapshot));
       trialsLoopScheduler.add(confidence_1RoutineEachFrame());
       trialsLoopScheduler.add(confidence_1RoutineEnd());
@@ -513,6 +542,9 @@ function trialsLoopBegin(trialsLoopScheduler, snapshot) {
       trialsLoopScheduler.add(image2RoutineBegin(snapshot));
       trialsLoopScheduler.add(image2RoutineEachFrame());
       trialsLoopScheduler.add(image2RoutineEnd());
+      trialsLoopScheduler.add(fixationRoutineBegin(snapshot));
+      trialsLoopScheduler.add(fixationRoutineEachFrame());
+      trialsLoopScheduler.add(fixationRoutineEnd());
       trialsLoopScheduler.add(confidence_2RoutineBegin(snapshot));
       trialsLoopScheduler.add(confidence_2RoutineEachFrame());
       trialsLoopScheduler.add(confidence_2RoutineEnd());
@@ -528,6 +560,126 @@ async function trialsLoopEnd() {
   psychoJS.experiment.removeLoop(trials);
 
   return Scheduler.Event.NEXT;
+}
+
+
+var _block_key_resp_allKeys;
+var block_instruComponents;
+function block_instruRoutineBegin(snapshot) {
+  return async function () {
+    TrialHandler.fromSnapshot(snapshot); // ensure that .thisN vals are up to date
+    
+    //------Prepare to start Routine 'block_instru'-------
+    t = 0;
+    block_instruClock.reset(); // clock
+    frameN = -1;
+    continueRoutine = true; // until we're told otherwise
+    // update component parameters for each repeat
+    block_key_resp.keys = undefined;
+    block_key_resp.rt = undefined;
+    _block_key_resp_allKeys = [];
+    // keep track of which components have finished
+    block_instruComponents = [];
+    block_instruComponents.push(block_instr_text);
+    block_instruComponents.push(block_key_resp);
+    
+    block_instruComponents.forEach( function(thisComponent) {
+      if ('status' in thisComponent)
+        thisComponent.status = PsychoJS.Status.NOT_STARTED;
+       });
+    return Scheduler.Event.NEXT;
+  }
+}
+
+
+function block_instruRoutineEachFrame() {
+  return async function () {
+    //------Loop for each frame of Routine 'block_instru'-------
+    // get current time
+    t = block_instruClock.getTime();
+    frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
+    // update/draw components on each frame
+    
+    // *block_instr_text* updates
+    if (t >= 0.0 && block_instr_text.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      block_instr_text.tStart = t;  // (not accounting for frame time here)
+      block_instr_text.frameNStart = frameN;  // exact frame index
+      
+      block_instr_text.setAutoDraw(true);
+    }
+
+    
+    // *block_key_resp* updates
+    if (t >= 0.0 && block_key_resp.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      block_key_resp.tStart = t;  // (not accounting for frame time here)
+      block_key_resp.frameNStart = frameN;  // exact frame index
+      
+      // keyboard checking is just starting
+      psychoJS.window.callOnFlip(function() { block_key_resp.clock.reset(); });  // t=0 on next screen flip
+      psychoJS.window.callOnFlip(function() { block_key_resp.start(); }); // start on screen flip
+      psychoJS.window.callOnFlip(function() { block_key_resp.clearEvents(); });
+    }
+
+    if (block_key_resp.status === PsychoJS.Status.STARTED) {
+      let theseKeys = block_key_resp.getKeys({keyList: ['space'], waitRelease: false});
+      _block_key_resp_allKeys = _block_key_resp_allKeys.concat(theseKeys);
+      if (_block_key_resp_allKeys.length > 0) {
+        block_key_resp.keys = _block_key_resp_allKeys[_block_key_resp_allKeys.length - 1].name;  // just the last key pressed
+        block_key_resp.rt = _block_key_resp_allKeys[_block_key_resp_allKeys.length - 1].rt;
+        // a response ends the routine
+        continueRoutine = false;
+      }
+    }
+    
+    // check for quit (typically the Esc key)
+    if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
+      return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
+    }
+    
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
+    
+    continueRoutine = false;  // reverts to True if at least one component still running
+    block_instruComponents.forEach( function(thisComponent) {
+      if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
+        continueRoutine = true;
+      }
+    });
+    
+    // refresh the screen if continuing
+    if (continueRoutine) {
+      return Scheduler.Event.FLIP_REPEAT;
+    } else {
+      return Scheduler.Event.NEXT;
+    }
+  };
+}
+
+
+function block_instruRoutineEnd() {
+  return async function () {
+    //------Ending Routine 'block_instru'-------
+    block_instruComponents.forEach( function(thisComponent) {
+      if (typeof thisComponent.setAutoDraw === 'function') {
+        thisComponent.setAutoDraw(false);
+      }
+    });
+    psychoJS.experiment.addData('block_key_resp.keys', block_key_resp.keys);
+    if (typeof block_key_resp.keys !== 'undefined') {  // we had a response
+        psychoJS.experiment.addData('block_key_resp.rt', block_key_resp.rt);
+        routineTimer.reset();
+        }
+    
+    block_key_resp.stop();
+    // the Routine "block_instru" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset();
+    
+    return Scheduler.Event.NEXT;
+  };
 }
 
 
@@ -631,24 +783,17 @@ function image1RoutineBegin(snapshot) {
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
-    
-    // 检查 thisTrial 是否存在并包含所需属性
-    if (thisTrial && 'condition' in thisTrial) {
-        if (thisTrial.condition === 1) {
-            current_img = thisTrial.high_trust_img;  // 高可信面孔
-        } else {
-            current_img = thisTrial.low_trust_img;  // 低可信面孔
-        }
-        
-        // 记录当前trial的信息
-        psychoJS.experiment.addData('first_image', current_img);
-        psychoJS.experiment.addData('identity', thisTrial.identity);
-        psychoJS.experiment.addData('condition', thisTrial.condition);
+    // 根据条件选择对应的图片
+    if (thisTrial['condition'] === 1) {
+        current_img = thisTrial['high_trust_img'];  // 高可信面孔
     } else {
-        console.error('thisTrial 未定义或缺少必要属性');
-        // 设置一个默认图像
-        current_img = 'blank.png';
+        current_img = thisTrial['low_trust_img'];  // 低可信面孔
     }
+    
+    // 记录当前trial的信息，供下个routine使用
+    psychoJS.experiment.addData('first_image', current_img);
+    psychoJS.experiment.addData('identity', thisTrial['identity']);
+    psychoJS.experiment.addData('condition', thisTrial['condition']);
     image_t1.setImage(current_img);
     rating_T1_keys.keys = undefined;
     rating_T1_keys.rt = undefined;
@@ -755,23 +900,18 @@ function image1RoutineEnd() {
         thisComponent.setAutoDraw(false);
       }
     });
-    let t1_rating = null;
+    // 将按键转换为数字评分
+    var t1_rating = null;
     if (rating_T1_keys.keys && rating_T1_keys.keys.length > 0) {
-        // 在JavaScript中将字符串转换为整数
-        t1_rating = parseInt(rating_T1_keys.keys);
-        
-        // 如果按键是数组，获取最后一个按键
-        if (Array.isArray(rating_T1_keys.keys)) {
-            t1_rating = parseInt(rating_T1_keys.keys[rating_T1_keys.keys.length - 1]);
-        }
+        // 获取最后一次按键
+        var lastKey = rating_T1_keys.keys[rating_T1_keys.keys.length - 1];
+        t1_rating = parseInt(lastKey);
+    } else {
+        t1_rating = null;
     }
     
     // 保存评分到全局字典
-    // 确保T1_ratings已经在Begin Experiment中初始化为空对象
-    if (typeof window.T1_ratings === 'undefined') {
-        window.T1_ratings = {};
-    }
-    window.T1_ratings[thisTrial['identity'].toString()] = t1_rating;
+    T1_ratings[String(thisTrial['identity'])] = t1_rating;
     
     // 保存评分到数据文件
     psychoJS.experiment.addData('rating_T1', t1_rating);
@@ -899,6 +1039,7 @@ function confidence_1RoutineEachFrame() {
 
 
 var conf_rating;
+var T1_confidence;
 function confidence_1RoutineEnd() {
   return async function () {
     //------Ending Routine 'confidence_1'-------
@@ -914,14 +1055,32 @@ function confidence_1RoutineEnd() {
         }
     
     confidence_T1_keys.stop();
-    if (confidence_T1_keys.keys) {
-        conf_rating = Number.parseInt(confidence_T1_keys.keys);
-    } else {
-        conf_rating = null;
-    }
-    T1_confidence[thisTrial["identity"].toString()] = conf_rating;
-    psychoJS.experiment.addData("confidence_T1", conf_rating);
+    // 处理置信度评分的按键响应
+    var conf_rating = null;
     
+    if (confidence_T1_keys.keys) {
+        if (Array.isArray(confidence_T1_keys.keys)) {
+            // 如果keys是数组，取最后一次按键
+            if (confidence_T1_keys.keys.length > 0) {
+                var lastKey = confidence_T1_keys.keys[confidence_T1_keys.keys.length - 1];
+                conf_rating = parseInt(lastKey);
+            }
+        } else {
+            // 如果keys是单个值
+            conf_rating = parseInt(confidence_T1_keys.keys);
+        }
+    }
+    
+    // 初始化全局字典（如果尚未初始化）
+    if (typeof T1_confidence === 'undefined') {
+        T1_confidence = {};
+    }
+    
+    // 保存确定性评分到全局字典
+    T1_confidence[String(thisTrial['identity'])] = conf_rating;
+    
+    // 保存确定性评分到数据文件
+    psychoJS.experiment.addData('confidence_T1', conf_rating);
     // the Routine "confidence_1" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
@@ -1058,35 +1217,46 @@ function image2RoutineEnd() {
         thisComponent.setAutoDraw(false);
       }
     });
-    // End Routine 代码 (rating_t2)
-    // 获取T1的评分
-    let t1_rating = null;
-    // 确保T1_ratings已定义并包含当前identity
-    if (typeof window.T1_ratings !== 'undefined' && window.T1_ratings[thisTrial['identity'].toString()] !== undefined) {
-        t1_rating = window.T1_ratings[thisTrial['identity'].toString()];
+    // End Routine
+    
+    // 获取T1的评分（从全局字典中）
+    var t1_rating = null;
+    if (typeof T1_ratings !== 'undefined' && T1_ratings[String(thisTrial['identity'])]) {
+        t1_rating = T1_ratings[String(thisTrial['identity'])];
     }
     
     // 获取T2评分
-    let t2_rating = null;
-    if (rating_T2_keys.keys && rating_T2_keys.keys.length > 0) {
-        // 转换为整数
-        t2_rating = parseInt(rating_T2_keys.keys);
-        
-        // 如果按键是数组，获取最后一个按键
+    var t2_rating = null;
+    if (rating_T2_keys && rating_T2_keys.keys) {
         if (Array.isArray(rating_T2_keys.keys)) {
-            t2_rating = parseInt(rating_T2_keys.keys[rating_T2_keys.keys.length - 1]);
+            // 如果keys是数组，取最后一次按键
+            if (rating_T2_keys.keys.length > 0) {
+                var lastKey = rating_T2_keys.keys[rating_T2_keys.keys.length - 1];
+                t2_rating = parseInt(lastKey);
+            }
+        } else {
+            // 如果keys是单个值
+            t2_rating = parseInt(rating_T2_keys.keys);
         }
     }
     
     // 计算评分变化（需要防止null值）
-    let rating_change = null;
+    var rating_change = null;
     if (t1_rating !== null && t2_rating !== null) {
         rating_change = t2_rating - t1_rating;
     }
     
-    // 保存数据
+    // 保存数据到实验文件
     psychoJS.experiment.addData('rating_T2', t2_rating);
     psychoJS.experiment.addData('rating_change', rating_change);
+    
+    // 记录反应时间（可选）
+    if (rating_T2_keys && rating_T2_keys.rt) {
+        var t2_rt = Array.isArray(rating_T2_keys.rt) ? 
+                    rating_T2_keys.rt[rating_T2_keys.rt.length - 1] : 
+                    rating_T2_keys.rt;
+        psychoJS.experiment.addData('rating_T2_rt', t2_rt);
+    }
     psychoJS.experiment.addData('rating_T2_keys.keys', rating_T2_keys.keys);
     if (typeof rating_T2_keys.keys !== 'undefined') {  // we had a response
         psychoJS.experiment.addData('rating_T2_keys.rt', rating_T2_keys.rt);
@@ -1227,20 +1397,39 @@ function confidence_2RoutineEnd() {
         }
     
     confidence_T2_keys.stop();
-    if (confidence_T2_keys.keys) {
-        conf_rating = Number.parseInt(confidence_T2_keys.keys);
-    } else {
-        conf_rating = null;
-    }
-    t1_conf = T1_confidence.get(thisTrial["identity"].toString(), null);
-    if (((t1_conf !== null) && (conf_rating !== null))) {
-        conf_change = (conf_rating - t1_conf);
-    } else {
-        conf_change = null;
-    }
-    psychoJS.experiment.addData("confidence_T2", conf_rating);
-    psychoJS.experiment.addData("confidence_change", conf_change);
+    // 处理第二次置信度评分
     
+    // 获取T2置信度评分
+    var conf_rating = null;
+    if (confidence_T2_keys && confidence_T2_keys.keys) {
+        if (Array.isArray(confidence_T2_keys.keys)) {
+            // 如果keys是数组，取最后一次按键
+            if (confidence_T2_keys.keys.length > 0) {
+                var lastKey = confidence_T2_keys.keys[confidence_T2_keys.keys.length - 1];
+                conf_rating = parseInt(lastKey);
+            }
+        } else {
+            // 如果keys是单个值
+            conf_rating = parseInt(confidence_T2_keys.keys);
+        }
+    }
+    
+    // 获取T1评分的确定性（JavaScript中没有.get()方法，需要手动检查）
+    var t1_conf = null;
+    var identity_key = String(thisTrial['identity']);
+    if (typeof T1_confidence !== 'undefined' && T1_confidence.hasOwnProperty(identity_key)) {
+        t1_conf = T1_confidence[identity_key];
+    }
+    
+    // 计算确定性变化
+    var conf_change = null;
+    if (t1_conf !== null && conf_rating !== null) {
+        conf_change = conf_rating - t1_conf;
+    }
+    
+    // 保存数据到实验文件
+    psychoJS.experiment.addData('confidence_T2', conf_rating);
+    psychoJS.experiment.addData('confidence_change', conf_change);
     // the Routine "confidence_2" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
