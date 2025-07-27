@@ -1,0 +1,47 @@
+4.5765 	WARNING 	Font Manager failed to load file C:\Users\HP\AppData\Local\Microsoft\Windows\Fonts\一定一定要先安装我再打开模板.TTF
+4.6187 	WARNING 	Font Manager failed to load file C:\Windows\Fonts\方正粗黑宋简体.ttf
+4.6801 	WARNING 	Font Manager failed to load file C:\WINDOWS\Fonts\方正粗黑宋简体.ttf
+4.9581 	WARNING 	Font Manager failed to load file C:\Users\HP\AppData\Local\Microsoft\Windows\Fonts\一定一定要先安装我再打开模板.TTF
+5.0402 	WARNING 	Font Manager failed to load file C:\Windows\Fonts\方正粗黑宋简体.ttf
+5.0985 	WARNING 	Font Manager failed to load file C:\WINDOWS\Fonts\方正粗黑宋简体.ttf
+15.0835 	WARNING 	User requested fullscreen with size [1707 1067], but screen is actually [2880, 1800]. Using actual size
+15.9826 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000021A69007908>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x0000021A6902ADA0>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([2880, 1800]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+15.9838 	EXP 	window1: mouseVisible = True
+15.9838 	EXP 	window1: recordFrameIntervals = False
+16.0936 	EXP 	window1: recordFrameIntervals = True
+16.2359 	EXP 	window1: recordFrameIntervals = False
+16.9039 	EXP 	Created instru_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='instru_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Any text\n\nincluding line breaks', units='height', win=Window(...), wrapWidth=1)
+16.9355 	EXP 	Created fixation_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='fixation_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+16.9423 	EXP 	Created image_t1 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_t1', opacity=1, ori=0.0, pos=array([0. , 0.1]), size=array([0.27, 0.37]), texRes=128.0, units='height', win=Window(...))
+17.0033 	EXP 	Created slider_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, image='slider.jpg', interpolate=True, mask=None, maskParams=None, name='slider_image', opacity=1, ori=0.0, pos=array([ 0.  , -0.37]), size=array([0.9, 0.1]), texRes=128.0, units='height', win=Window(...))
+17.0483 	EXP 	Created confidence_T1_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='confidence_T1_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='您对刚才的可信度评分有多确定？', units='height', win=Window(...), wrapWidth=1)
+17.0996 	EXP 	Created slider_confidence_t1 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, image='slider.jpg', interpolate=True, mask=None, maskParams=None, name='slider_confidence_t1', opacity=1, ori=0.0, pos=array([ 0.  , -0.37]), size=array([0.9, 0.1]), texRes=128.0, units='height', win=Window(...))
+17.1017 	EXP 	Created fixation_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='fixation_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+17.1061 	EXP 	Created image_t2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_t2', opacity=1, ori=0.0, pos=array([0. , 0.1]), size=array([0.27, 0.37]), texRes=128.0, units='height', win=Window(...))
+17.1536 	EXP 	Created slider_image_t2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, image='slider.jpg', interpolate=True, mask=None, maskParams=None, name='slider_image_t2', opacity=1, ori=0.0, pos=array([ 0.  , -0.37]), size=array([0.9, 0.1]), texRes=128.0, units='height', win=Window(...))
+17.1624 	EXP 	Created confidence2_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='confidence2_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='您对刚才的可信度评分有多确定？', units='height', win=Window(...), wrapWidth=1)
+17.2141 	EXP 	Created slider_confidence_t2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, image='slider.jpg', interpolate=True, mask=None, maskParams=None, name='slider_confidence_t2', opacity=1, ori=0.0, pos=array([ 0.  , -0.37]), size=array([0.9, 0.1]), texRes=128.0, units='height', win=Window(...))
+17.2755 	EXP 	Created end_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='end_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='感谢您参与本次研究！请按空格键退出。', units='height', win=Window(...), wrapWidth=1)
+17.3073 	DATA 	Keypress: capslock
+17.3142 	EXP 	instru_text: autoDraw = True
+26.1219 	DATA 	Keypress: space
+26.1497 	EXP 	Imported data\temp_trials_1.csv as conditions, 20 conditions, 6 params
+26.1503 	EXP 	Created sequence: random, trialTypes=20, nReps=1, seed=None
+26.1507 	EXP 	New trial (rep=0, index=0): OrderedDict([('condition', 2), ('gender', 'male'), ('high_trust_img', 'stimuli/0-10-6.jpg'), ('identity', 10), ('low_trust_img', 'stimuli/0-10-13.jpg'), ('range', 1.8125)])
+26.1578 	EXP 	instru_text: autoDraw = False
+26.1578 	EXP 	fixation_text: autoDraw = True
+27.1770 	EXP 	fixation_text: autoDraw = False
+27.1770 	EXP 	image_t1: image = 'stimuli/0-10-13.jpg'
+27.1770 	EXP 	image_t1: autoDraw = True
+27.1770 	EXP 	slider_image: autoDraw = True
+28.2574 	DATA 	Keypress: w
+28.6285 	DATA 	Keypress: e
+29.4894 	DATA 	Keypress: lshift
+29.5869 	DATA 	Keypress: capslock
+30.0636 	DATA 	Keypress: 3
+30.0682 	EXP 	image_t1: autoDraw = False
+30.0682 	EXP 	slider_image: autoDraw = False
+30.0682 	EXP 	confidence_T1_text: autoDraw = True
+30.0682 	EXP 	slider_confidence_t1: autoDraw = True
+33.9904 	DATA 	Keypress: u
+35.4014 	EXP 	window1: mouseVisible = True

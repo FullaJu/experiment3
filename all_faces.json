@@ -1,0 +1,142 @@
+[
+  {
+    "identity": 6,
+    "gender": "male",
+    "high_trust_img": "stimuli/0-6-11.jpg",
+    "low_trust_img": "stimuli/0-6-1.jpg",
+    "range": 1.53125
+  },
+  {
+    "identity": 26,
+    "gender": "male",
+    "high_trust_img": "stimuli/0-26-12.jpg",
+    "low_trust_img": "stimuli/0-26-3.jpg",
+    "range": 1.59375
+  },
+  {
+    "identity": 2,
+    "gender": "female",
+    "high_trust_img": "stimuli/1-2-3.jpg",
+    "low_trust_img": "stimuli/1-2-9.jpg",
+    "range": 1.6875
+  },
+  {
+    "identity": 21,
+    "gender": "female",
+    "high_trust_img": "stimuli/1-21-18.jpg",
+    "low_trust_img": "stimuli/1-21-2.jpg",
+    "range": 1.6875
+  },
+  {
+    "identity": 10,
+    "gender": "male",
+    "high_trust_img": "stimuli/0-10-6.jpg",
+    "low_trust_img": "stimuli/0-10-13.jpg",
+    "range": 1.8125
+  },
+  {
+    "identity": 4,
+    "gender": "female",
+    "high_trust_img": "stimuli/1-4-13.jpg",
+    "low_trust_img": "stimuli/1-4-6.jpg",
+    "range": 2.0
+  },
+  {
+    "identity": 17,
+    "gender": "male",
+    "high_trust_img": "stimuli/0-17-11.jpg",
+    "low_trust_img": "stimuli/0-17-3.jpg",
+    "range": 0.6875
+  },
+  {
+    "identity": 22,
+    "gender": "female",
+    "high_trust_img": "stimuli/1-22-1.jpg",
+    "low_trust_img": "stimuli/1-22-8.jpg",
+    "range": 0.6875
+  },
+  {
+    "identity": 9,
+    "gender": "male",
+    "high_trust_img": "stimuli/0-9-3.jpg",
+    "low_trust_img": "stimuli/0-9-20.jpg",
+    "range": 0.78125
+  },
+  {
+    "identity": 14,
+    "gender": "female",
+    "high_trust_img": "stimuli/1-14-7.jpg",
+    "low_trust_img": "stimuli/1-14-10.jpg",
+    "range": 0.875
+  },
+  {
+    "identity": 20,
+    "gender": "male",
+    "high_trust_img": "stimuli/0-20-6.jpg",
+    "low_trust_img": "stimuli/0-20-19.jpg",
+    "range": 0.90625
+  },
+  {
+    "identity": 3,
+    "gender": "male",
+    "high_trust_img": "stimuli/0-3-4.jpg",
+    "low_trust_img": "stimuli/0-3-16.jpg",
+    "range": 0.96875
+  },
+  {
+    "identity": 25,
+    "gender": "male",
+    "high_trust_img": "stimuli/0-25-20.jpg",
+    "low_trust_img": "stimuli/0-25-13.jpg",
+    "range": 1.15625
+  },
+  {
+    "identity": 15,
+    "gender": "male",
+    "high_trust_img": "stimuli/0-15-4.jpg",
+    "low_trust_img": "stimuli/0-15-18.jpg",
+    "range": 1.1875
+  },
+  {
+    "identity": 18,
+    "gender": "male",
+    "high_trust_img": "stimuli/0-18-9.jpg",
+    "low_trust_img": "stimuli/0-18-18.jpg",
+    "range": 1.1875
+  },
+  {
+    "identity": 23,
+    "gender": "female",
+    "high_trust_img": "stimuli/1-23-19.jpg",
+    "low_trust_img": "stimuli/1-23-8.jpg",
+    "range": 1.28125
+  },
+  {
+    "identity": 8,
+    "gender": "female",
+    "high_trust_img": "stimuli/1-8-11.jpg",
+    "low_trust_img": "stimuli/1-8-15.jpg",
+    "range": 1.375
+  },
+  {
+    "identity": 24,
+    "gender": "female",
+    "high_trust_img": "stimuli/1-24-13.jpg",
+    "low_trust_img": "stimuli/1-24-5.jpg",
+    "range": 1.40625
+  },
+  {
+    "identity": 7,
+    "gender": "female",
+    "high_trust_img": "stimuli/1-7-18.jpg",
+    "low_trust_img": "stimuli/1-7-1.jpg",
+    "range": 1.46875
+  },
+  {
+    "identity": 16,
+    "gender": "female",
+    "high_trust_img": "stimuli/1-16-2.jpg",
+    "low_trust_img": "stimuli/1-16-1.jpg",
+    "range": 1.5
+  }
+]

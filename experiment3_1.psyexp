@@ -1,0 +1,568 @@
+﻿<?xml version="1.0" ?>
+<PsychoPy2experiment encoding="utf-8" version="2021.2.3">
+  <Settings>
+    <Param name="Audio latency priority" updates="None" val="use prefs" valType="str"/>
+    <Param name="Audio lib" updates="None" val="use prefs" valType="str"/>
+    <Param name="Completed URL" updates="None" val="" valType="str"/>
+    <Param name="Data file delimiter" updates="None" val="auto" valType="str"/>
+    <Param name="Data filename" updates="None" val="u'data/%s_%s_%s' % (expInfo['编号*'], expName, expInfo['date'])" valType="code"/>
+    <Param name="Enable Escape" updates="None" val="True" valType="bool"/>
+    <Param name="Experiment info" updates="None" val="{'编号*': '', 'session': '001'}" valType="code"/>
+    <Param name="Force stereo" updates="None" val="True" valType="bool"/>
+    <Param name="Full-screen window" updates="None" val="True" valType="bool"/>
+    <Param name="HTML path" updates="None" val="" valType="str"/>
+    <Param name="Incomplete URL" updates="None" val="" valType="str"/>
+    <Param name="Monitor" updates="None" val="testMonitor" valType="str"/>
+    <Param name="Resources" updates="None" val="['all_faces.json', 'all_faces.xlsx', 'blank.png']" valType="list"/>
+    <Param name="Save csv file" updates="None" val="False" valType="bool"/>
+    <Param name="Save excel file" updates="None" val="False" valType="bool"/>
+    <Param name="Save hdf5 file" updates="None" val="False" valType="bool"/>
+    <Param name="Save log file" updates="None" val="True" valType="bool"/>
+    <Param name="Save psydat file" updates="None" val="True" valType="bool"/>
+    <Param name="Save wide csv file" updates="None" val="True" valType="bool"/>
+    <Param name="Screen" updates="None" val="1" valType="num"/>
+    <Param name="Show info dlg" updates="None" val="True" valType="bool"/>
+    <Param name="Show mouse" updates="None" val="False" valType="bool"/>
+    <Param name="Units" updates="None" val="height" valType="str"/>
+    <Param name="Use version" updates="None" val="" valType="str"/>
+    <Param name="Window size (pixels)" updates="None" val="[1707, 1067]" valType="list"/>
+    <Param name="blendMode" updates="None" val="avg" valType="str"/>
+    <Param name="color" updates="None" val="$[0,0,0]" valType="color"/>
+    <Param name="colorSpace" updates="None" val="rgb" valType="str"/>
+    <Param name="elAddress" updates="None" val="100.1.1.1" valType="str"/>
+    <Param name="elDataFiltering" updates="None" val="FILTER_LEVEL_2" valType="str"/>
+    <Param name="elLiveFiltering" updates="None" val="FILTER_LEVEL_OFF" valType="str"/>
+    <Param name="elModel" updates="None" val="EYELINK 1000 DESKTOP" valType="str"/>
+    <Param name="elPupilAlgorithm" updates="None" val="ELLIPSE_FIT" valType="str"/>
+    <Param name="elPupilMeasure" updates="None" val="PUPIL_AREA" valType="str"/>
+    <Param name="elSampleRate" updates="None" val="1000" valType="num"/>
+    <Param name="elSimMode" updates="None" val="False" valType="bool"/>
+    <Param name="elTrackEyes" updates="None" val="RIGHT_EYE" valType="str"/>
+    <Param name="elTrackingMode" updates="None" val="PUPIL_CR_TRACKING" valType="str"/>
+    <Param name="expName" updates="None" val="experiment3_1" valType="str"/>
+    <Param name="exportHTML" updates="None" val="on Sync" valType="str"/>
+    <Param name="eyetracker" updates="None" val="None" valType="str"/>
+    <Param name="gpAddress" updates="None" val="127.0.0.1" valType="str"/>
+    <Param name="gpPort" updates="None" val="4242" valType="num"/>
+    <Param name="logging level" updates="None" val="exp" valType="code"/>
+    <Param name="mgBlink" updates="None" val="('MIDDLE_BUTTON',)" valType="list"/>
+    <Param name="mgMove" updates="None" val="CONTINUOUS" valType="str"/>
+    <Param name="mgSaccade" updates="None" val="0.5" valType="num"/>
+    <Param name="tbLicenseFile" updates="None" val="" valType="str"/>
+    <Param name="tbModel" updates="None" val="" valType="str"/>
+    <Param name="tbSampleRate" updates="None" val="60" valType="num"/>
+    <Param name="tbSerialNo" updates="None" val="" valType="str"/>
+  </Settings>
+  <Routines>
+    <Routine name="instruction">
+      <TextComponent name="instru_text">
+        <Param name="color" updates="constant" val="white" valType="color"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="None" valType="str"/>
+        <Param name="font" updates="constant" val="Open Sans" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="num"/>
+        <Param name="name" updates="None" val="instru_text" valType="code"/>
+        <Param name="opacity" updates="constant" val="" valType="num"/>
+        <Param name="ori" updates="constant" val="0" valType="num"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="list"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Any text&amp;#10;&amp;#10;including line breaks" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="num"/>
+      </TextComponent>
+      <CodeComponent name="code_instru">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="# 导入必要的库&amp;#10;import random&amp;#10;import pandas as pd&amp;#10;import os&amp;#10;import numpy as np&amp;#10;&amp;#10;&amp;#10;current_img = &quot;blank.png&quot;  &amp;#10;# 读取刺激列表&amp;#10;stim_file = 'all_faces.xlsx'&amp;#10;faces_df = pd.read_excel(stim_file)&amp;#10;&amp;#10;# 分离男性和女性面孔&amp;#10;male_faces = faces_df[faces_df['gender'] == 'male'].sort_values(by='range', ascending=False).reset_index(drop=True)&amp;#10;female_faces = faces_df[faces_df['gender'] == 'female'].sort_values(by='range', ascending=False).reset_index(drop=True)&amp;#10;&amp;#10;# 获取参与者编号，用于确定配对方式&amp;#10;participant_id = int(expInfo[&quot;编号*&quot;])&amp;#10;&amp;#10;# 初始化存储trials数据的列表&amp;#10;trials_data = []&amp;#10;&amp;#10;# 处理男性面孔&amp;#10;for i in range(0, len(male_faces), 2):&amp;#10;    if i + 1 &lt; len(male_faces):  # 确保有配对的人物&amp;#10;        face1 = male_faces.iloc[i]&amp;#10;        face2 = male_faces.iloc[i+1]&amp;#10;        &amp;#10;        # 根据被试编号和配对索引决定分配方式&amp;#10;        if (participant_id + i//2) % 2 == 0:&amp;#10;            # 人物1到条件1，人物2到条件2&amp;#10;            trials_data.append({**face1.to_dict(), 'condition': 1})&amp;#10;            trials_data.append({**face2.to_dict(), 'condition': 2})&amp;#10;        else:&amp;#10;            # 人物1到条件2，人物2到条件1&amp;#10;            trials_data.append({**face1.to_dict(), 'condition': 2})&amp;#10;            trials_data.append({**face2.to_dict(), 'condition': 1})&amp;#10;&amp;#10;# 处理女性面孔，使用相同的逻辑&amp;#10;for i in range(0, len(female_faces), 2):&amp;#10;    if i + 1 &lt; len(female_faces):  # 确保有配对的人物&amp;#10;        face1 = female_faces.iloc[i]&amp;#10;        face2 = female_faces.iloc[i+1]&amp;#10;        &amp;#10;        # 根据被试编号和配对索引决定分配方式&amp;#10;        if (participant_id + i//2) % 2 == 0:&amp;#10;            trials_data.append({**face1.to_dict(), 'condition': 1})&amp;#10;            trials_data.append({**face2.to_dict(), 'condition': 2})&amp;#10;        else:&amp;#10;            trials_data.append({**face1.to_dict(), 'condition': 2})&amp;#10;            trials_data.append({**face2.to_dict(), 'condition': 1})&amp;#10;&amp;#10;# 转换为数据框并随机化试次顺序&amp;#10;trials_df = pd.DataFrame(trials_data)&amp;#10;trials_df = trials_df.sample(frac=1).reset_index(drop=True)  # 随机化试次顺序&amp;#10;&amp;#10;# 检查两个条件下的性别平衡情况&amp;#10;condition1 = trials_df[trials_df['condition'] == 1]&amp;#10;condition2 = trials_df[trials_df['condition'] == 2]&amp;#10;&amp;#10;# 打印平衡检查结果&amp;#10;print(f&quot;条件1: 男性 = {sum(condition1['gender'] == 'male')}, 女性 = {sum(condition1['gender'] == 'female')}&quot;)&amp;#10;print(f&quot;条件2: 男性 = {sum(condition2['gender'] == 'male')}, 女性 = {sum(condition2['gender'] == 'female')}&quot;)&amp;#10;print(f&quot;条件1 平均range: {condition1['range'].mean():.2f}&quot;)&amp;#10;print(f&quot;条件2 平均range: {condition2['range'].mean():.2f}&quot;)&amp;#10;&amp;#10;# 保存为临时文件供TrialHandler使用&amp;#10;temp_trials_file = os.path.join('data', f'temp_trials_{expInfo[&quot;编号*&quot;]}.csv')&amp;#10;trials_df.to_csv(temp_trials_file, index=False)&amp;#10;&amp;#10;# 设置为全局变量，供后续使用&amp;#10;thisExp.extraInfo['trials_file'] = temp_trials_file&amp;#10;&amp;#10;# 创建全局字典存储评分和确定性&amp;#10;T1_ratings = {}&amp;#10;T1_confidence = {}" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="// 初始化全局变量&amp;#10;var current_img = &quot;blank.png&quot;;&amp;#10;&amp;#10;// 读取刺激列表 - 在线上实验中，您需要确保Excel文件已转换为JSON格式&amp;#10;// 假设您已经将all_faces.xlsx转换为JSON格式并通过资源加载&amp;#10;var faces_df = []; // 这里应该是您的面孔数据&amp;#10;&amp;#10;// 如果使用JSON文件，可以通过以下方式加载：&amp;#10;// faces_df = require('all_faces.json'); // 或其他加载方式&amp;#10;&amp;#10;// 分离男性和女性面孔&amp;#10;var male_faces = faces_df.filter(face =&gt; face.gender === 'male')&amp;#10;                        .sort((a, b) =&gt; b.range - a.range); // 按range降序排列&amp;#10;var female_faces = faces_df.filter(face =&gt; face.gender === 'female')&amp;#10;                          .sort((a, b) =&gt; b.range - a.range); // 按range降序排列&amp;#10;&amp;#10;// 获取参与者编号&amp;#10;var participant_id = parseInt(expInfo[&quot;编号*&quot;]);&amp;#10;&amp;#10;// 初始化存储trials数据的数组&amp;#10;var trials_data = [];&amp;#10;&amp;#10;// 处理男性面孔&amp;#10;for (let i = 0; i &lt; male_faces.length; i += 2) {&amp;#10;    if (i + 1 &lt; male_faces.length) { // 确保有配对的人物&amp;#10;        var face1 = male_faces[i];&amp;#10;        var face2 = male_faces[i + 1];&amp;#10;        &amp;#10;        // 根据被试编号和配对索引决定分配方式&amp;#10;        if ((participant_id + Math.floor(i/2)) % 2 === 0) {&amp;#10;            // 人物1到条件1，人物2到条件2&amp;#10;            trials_data.push({...face1, condition: 1});&amp;#10;            trials_data.push({...face2, condition: 2});&amp;#10;        } else {&amp;#10;            // 人物1到条件2，人物2到条件1&amp;#10;            trials_data.push({...face1, condition: 2});&amp;#10;            trials_data.push({...face2, condition: 1});&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;&amp;#10;// 处理女性面孔，使用相同的逻辑&amp;#10;for (let i = 0; i &lt; female_faces.length; i += 2) {&amp;#10;    if (i + 1 &lt; female_faces.length) { // 确保有配对的人物&amp;#10;        var face1 = female_faces[i];&amp;#10;        var face2 = female_faces[i + 1];&amp;#10;        &amp;#10;        // 根据被试编号和配对索引决定分配方式&amp;#10;        if ((participant_id + Math.floor(i/2)) % 2 === 0) {&amp;#10;            trials_data.push({...face1, condition: 1});&amp;#10;            trials_data.push({...face2, condition: 2});&amp;#10;        } else {&amp;#10;            trials_data.push({...face1, condition: 2});&amp;#10;            trials_data.push({...face2, condition: 1});&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;&amp;#10;// 随机化试次顺序&amp;#10;function shuffleArray(array) {&amp;#10;    var shuffled = [...array];&amp;#10;    for (let i = shuffled.length - 1; i &gt; 0; i--) {&amp;#10;        const j = Math.floor(Math.random() * (i + 1));&amp;#10;        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];&amp;#10;    }&amp;#10;    return shuffled;&amp;#10;}&amp;#10;&amp;#10;trials_data = shuffleArray(trials_data);&amp;#10;&amp;#10;// 检查两个条件下的性别平衡情况&amp;#10;var condition1 = trials_data.filter(trial =&gt; trial.condition === 1);&amp;#10;var condition2 = trials_data.filter(trial =&gt; trial.condition === 2);&amp;#10;&amp;#10;// 计算性别分布&amp;#10;var condition1_male = condition1.filter(trial =&gt; trial.gender === 'male').length;&amp;#10;var condition1_female = condition1.filter(trial =&gt; trial.gender === 'female').length;&amp;#10;var condition2_male = condition2.filter(trial =&gt; trial.gender === 'male').length;&amp;#10;var condition2_female = condition2.filter(trial =&gt; trial.gender === 'female').length;&amp;#10;&amp;#10;// 计算平均range&amp;#10;var condition1_avg_range = condition1.reduce((sum, trial) =&gt; sum + trial.range, 0) / condition1.length;&amp;#10;var condition2_avg_range = condition2.reduce((sum, trial) =&gt; sum + trial.range, 0) / condition2.length;&amp;#10;&amp;#10;// 打印平衡检查结果（在线上实验中可能需要使用console.log）&amp;#10;console.log(`条件1: 男性 = ${condition1_male}, 女性 = ${condition1_female}`);&amp;#10;console.log(`条件2: 男性 = ${condition2_male}, 女性 = ${condition2_female}`);&amp;#10;console.log(`条件1 平均range: ${condition1_avg_range.toFixed(2)}`);&amp;#10;console.log(`条件2 平均range: ${condition2_avg_range.toFixed(2)}`);&amp;#10;&amp;#10;// 在线上实验中，您可能需要将数据存储在全局变量中而不是文件&amp;#10;// 设置全局变量供后续使用&amp;#10;psychoJS.experiment.extraInfo['trials_data'] = trials_data;&amp;#10;&amp;#10;// 创建全局字典存储评分和确定性&amp;#10;var T1_ratings = {};&amp;#10;var T1_confidence = {};&amp;#10;&amp;#10;// 如果需要创建TrialHandler，可以使用以下方式：&amp;#10;// var trialHandler = new data.TrialHandler({&amp;#10;//     trialList: trials_data,&amp;#10;//     nReps: 1,&amp;#10;//     method: data.TrialHandler.Method.SEQUENTIAL&amp;#10;// });" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Both" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code_instru" valType="code"/>
+      </CodeComponent>
+      <KeyboardComponent name="instru_key_resp">
+        <Param name="allowedKeys" updates="constant" val="'space'" valType="list"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="instru_key_resp" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="image1">
+      <CodeComponent name="code_t1">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="// 根据条件选择对应的图片&amp;#10;if (thisTrial['condition'] === 1) {&amp;#10;    current_img = thisTrial['high_trust_img'];  // 高可信面孔&amp;#10;} else {&amp;#10;    current_img = thisTrial['low_trust_img'];  // 低可信面孔&amp;#10;}&amp;#10;&amp;#10;// 记录当前trial的信息，供下个routine使用&amp;#10;psychoJS.experiment.addData('first_image', current_img);&amp;#10;psychoJS.experiment.addData('identity', thisTrial['identity']);&amp;#10;psychoJS.experiment.addData('condition', thisTrial['condition']);" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="# Begin Routine&amp;#10;&amp;#10;if thisTrial['condition'] == 1:&amp;#10;    current_img = thisTrial['high_trust_img']  # 高可信面孔&amp;#10;else:&amp;#10;    current_img = thisTrial['low_trust_img']  # 低可信面孔&amp;#10;    &amp;#10;# 记录当前trial的信息，供下个routine使用&amp;#10;thisExp.addData('first_image', current_img)&amp;#10;thisExp.addData('identity', thisTrial['identity'])&amp;#10;thisExp.addData('condition', thisTrial['condition'])" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Both" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="// 将按键转换为数字评分&amp;#10;var t1_rating = null;&amp;#10;if (rating_T1_keys.keys &amp;&amp; rating_T1_keys.keys.length &gt; 0) {&amp;#10;    // 获取最后一次按键&amp;#10;    var lastKey = rating_T1_keys.keys[rating_T1_keys.keys.length - 1];&amp;#10;    t1_rating = parseInt(lastKey);&amp;#10;} else {&amp;#10;    t1_rating = null;&amp;#10;}&amp;#10;&amp;#10;// 保存评分到全局字典&amp;#10;T1_ratings[String(thisTrial['identity'])] = t1_rating;&amp;#10;&amp;#10;// 保存评分到数据文件&amp;#10;psychoJS.experiment.addData('rating_T1', t1_rating);" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="# 将按键转换为数字评分&amp;#10;if rating_T1_keys.keys:&amp;#10;    t1_rating = int(rating_T1_keys.keys)&amp;#10;else:&amp;#10;    t1_rating = None&amp;#10;&amp;#10;# 保存评分到全局字典&amp;#10;T1_ratings[str(thisTrial['identity'])] = t1_rating&amp;#10;&amp;#10;# 保存评分到数据文件&amp;#10;thisExp.addData('rating_T1', t1_rating)" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code_t1" valType="code"/>
+      </CodeComponent>
+      <ImageComponent name="image_t1">
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="color"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="image" updates="set every repeat" val="$current_img" valType="file"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="mask" updates="constant" val="" valType="str"/>
+        <Param name="name" updates="None" val="image_t1" valType="code"/>
+        <Param name="opacity" updates="constant" val="" valType="num"/>
+        <Param name="ori" updates="constant" val="0" valType="num"/>
+        <Param name="pos" updates="constant" val="(0, 0.1)" valType="list"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="size" updates="constant" val="(0.27, 0.37)" valType="list"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="texture resolution" updates="constant" val="128" valType="num"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </ImageComponent>
+      <KeyboardComponent name="rating_T1_keys">
+        <Param name="allowedKeys" updates="constant" val="'1','2','3','4','5','6','7','8','9'" valType="list"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="rating_T1_keys" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+      <ImageComponent name="slider_image">
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="color"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="image" updates="constant" val="slider.jpg" valType="file"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="mask" updates="constant" val="" valType="str"/>
+        <Param name="name" updates="None" val="slider_image" valType="code"/>
+        <Param name="opacity" updates="constant" val="" valType="num"/>
+        <Param name="ori" updates="constant" val="0" valType="num"/>
+        <Param name="pos" updates="constant" val="(0, -0.37)" valType="list"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="size" updates="constant" val="(0.9, 0.1)" valType="list"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="texture resolution" updates="constant" val="128" valType="num"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </ImageComponent>
+    </Routine>
+    <Routine name="image2">
+      <CodeComponent name="code_t2">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="// 根据条件决定显示哪张图片&amp;#10;if (thisTrial['condition'] === 1) {&amp;#10;    current_img = thisTrial['low_trust_img'];  // 低可信面孔&amp;#10;} else {&amp;#10;    current_img = thisTrial['high_trust_img'];  // 高可信面孔&amp;#10;}&amp;#10;    &amp;#10;// 记录当前trial的第二张图片&amp;#10;psychoJS.experiment.addData('second_image', current_img);" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="# Begin Routine&amp;#10;&amp;#10;&amp;#10;# 根据条件决定显示哪张图片&amp;#10;if thisTrial['condition'] == 1:&amp;#10;    current_img = thisTrial['low_trust_img']  # 低可信面孔&amp;#10;else:&amp;#10;    current_img = thisTrial['high_trust_img']  # 高可信面孔&amp;#10;    &amp;#10;# 记录当前trial的第二张图片&amp;#10;thisExp.addData('second_image', current_img)" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Both" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="// End Routine&amp;#10;&amp;#10;// 获取T1的评分（从全局字典中）&amp;#10;var t1_rating = null;&amp;#10;if (typeof T1_ratings !== 'undefined' &amp;&amp; T1_ratings[String(thisTrial['identity'])]) {&amp;#10;    t1_rating = T1_ratings[String(thisTrial['identity'])];&amp;#10;}&amp;#10;&amp;#10;// 获取T2评分&amp;#10;var t2_rating = null;&amp;#10;if (rating_T2_keys &amp;&amp; rating_T2_keys.keys) {&amp;#10;    if (Array.isArray(rating_T2_keys.keys)) {&amp;#10;        // 如果keys是数组，取最后一次按键&amp;#10;        if (rating_T2_keys.keys.length &gt; 0) {&amp;#10;            var lastKey = rating_T2_keys.keys[rating_T2_keys.keys.length - 1];&amp;#10;            t2_rating = parseInt(lastKey);&amp;#10;        }&amp;#10;    } else {&amp;#10;        // 如果keys是单个值&amp;#10;        t2_rating = parseInt(rating_T2_keys.keys);&amp;#10;    }&amp;#10;}&amp;#10;&amp;#10;// 计算评分变化（需要防止null值）&amp;#10;var rating_change = null;&amp;#10;if (t1_rating !== null &amp;&amp; t2_rating !== null) {&amp;#10;    rating_change = t2_rating - t1_rating;&amp;#10;}&amp;#10;&amp;#10;// 保存数据到实验文件&amp;#10;psychoJS.experiment.addData('rating_T2', t2_rating);&amp;#10;psychoJS.experiment.addData('rating_change', rating_change);&amp;#10;&amp;#10;// 记录反应时间（可选）&amp;#10;if (rating_T2_keys &amp;&amp; rating_T2_keys.rt) {&amp;#10;    var t2_rt = Array.isArray(rating_T2_keys.rt) ? &amp;#10;                rating_T2_keys.rt[rating_T2_keys.rt.length - 1] : &amp;#10;                rating_T2_keys.rt;&amp;#10;    psychoJS.experiment.addData('rating_T2_rt', t2_rt);&amp;#10;}" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="# End Routine&amp;#10;# 获取T1的评分&amp;#10;t1_rating = T1_ratings[str(thisTrial['identity'])]&amp;#10;&amp;#10;# 获取T2评分&amp;#10;if rating_T2_keys.keys:&amp;#10;    t2_rating = int(rating_T2_keys.keys)&amp;#10;else:&amp;#10;    t2_rating = None&amp;#10;&amp;#10;# 计算评分变化（需要防止None值）&amp;#10;if t1_rating is not None and t2_rating is not None:&amp;#10;    rating_change = t2_rating - t1_rating&amp;#10;else:&amp;#10;    rating_change = None&amp;#10;&amp;#10;# 保存数据&amp;#10;thisExp.addData('rating_T2', t2_rating)&amp;#10;thisExp.addData('rating_change', rating_change)" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code_t2" valType="code"/>
+      </CodeComponent>
+      <ImageComponent name="image_t2">
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="color"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="image" updates="set every repeat" val="$current_img" valType="file"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="mask" updates="constant" val="" valType="str"/>
+        <Param name="name" updates="None" val="image_t2" valType="code"/>
+        <Param name="opacity" updates="constant" val="" valType="num"/>
+        <Param name="ori" updates="constant" val="0" valType="num"/>
+        <Param name="pos" updates="constant" val="(0, 0.1)" valType="list"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="size" updates="constant" val="(0.27, 0.37)" valType="list"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="texture resolution" updates="constant" val="128" valType="num"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </ImageComponent>
+      <KeyboardComponent name="rating_T2_keys">
+        <Param name="allowedKeys" updates="constant" val="'1','2','3','4','5','6','7','8','9'" valType="list"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="rating_T2_keys" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+      <ImageComponent name="slider_image_t2">
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="color"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="image" updates="constant" val="slider.jpg" valType="file"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="mask" updates="constant" val="" valType="str"/>
+        <Param name="name" updates="None" val="slider_image_t2" valType="code"/>
+        <Param name="opacity" updates="constant" val="" valType="num"/>
+        <Param name="ori" updates="constant" val="0" valType="num"/>
+        <Param name="pos" updates="constant" val="(0, -0.37)" valType="list"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="size" updates="constant" val="(0.9, 0.1)" valType="list"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="texture resolution" updates="constant" val="128" valType="num"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </ImageComponent>
+    </Routine>
+    <Routine name="end">
+      <TextComponent name="end_text">
+        <Param name="color" updates="constant" val="white" valType="color"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="None" valType="str"/>
+        <Param name="font" updates="constant" val="Open Sans" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="num"/>
+        <Param name="name" updates="None" val="end_text" valType="code"/>
+        <Param name="opacity" updates="constant" val="" valType="num"/>
+        <Param name="ori" updates="constant" val="0" valType="num"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="list"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="感谢您参与本次研究！请按空格键退出。" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="num"/>
+      </TextComponent>
+      <KeyboardComponent name="end_key_resp">
+        <Param name="allowedKeys" updates="constant" val="'space'" valType="list"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="end_key_resp" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="fixation">
+      <TextComponent name="fixation_text">
+        <Param name="color" updates="constant" val="white" valType="color"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="None" valType="str"/>
+        <Param name="font" updates="constant" val="Open Sans" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="num"/>
+        <Param name="name" updates="None" val="fixation_text" valType="code"/>
+        <Param name="opacity" updates="constant" val="" valType="num"/>
+        <Param name="ori" updates="constant" val="0" valType="num"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="list"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="1.0" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="num"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="confidence_2">
+      <TextComponent name="confidence2_text">
+        <Param name="color" updates="constant" val="white" valType="color"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="None" valType="str"/>
+        <Param name="font" updates="constant" val="Open Sans" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="num"/>
+        <Param name="name" updates="None" val="confidence2_text" valType="code"/>
+        <Param name="opacity" updates="constant" val="" valType="num"/>
+        <Param name="ori" updates="constant" val="0" valType="num"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="list"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="您对刚才的可信度评分有多确定？" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="num"/>
+      </TextComponent>
+      <KeyboardComponent name="confidence_T2_keys">
+        <Param name="allowedKeys" updates="constant" val="'1','2','3','4','5','6','7','8','9'" valType="list"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="confidence_T2_keys" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+      <ImageComponent name="slider_confidence_t2">
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="color"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="image" updates="constant" val="slider.jpg" valType="file"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="mask" updates="constant" val="" valType="str"/>
+        <Param name="name" updates="None" val="slider_confidence_t2" valType="code"/>
+        <Param name="opacity" updates="constant" val="" valType="num"/>
+        <Param name="ori" updates="constant" val="0" valType="num"/>
+        <Param name="pos" updates="constant" val="(0, -0.37)" valType="list"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="size" updates="constant" val="(0.9, 0.1)" valType="list"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="texture resolution" updates="constant" val="128" valType="num"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </ImageComponent>
+      <CodeComponent name="confidence_T2_code">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Both" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="// 处理第二次置信度评分&amp;#10;&amp;#10;// 获取T2置信度评分&amp;#10;var conf_rating = null;&amp;#10;if (confidence_T2_keys &amp;&amp; confidence_T2_keys.keys) {&amp;#10;    if (Array.isArray(confidence_T2_keys.keys)) {&amp;#10;        // 如果keys是数组，取最后一次按键&amp;#10;        if (confidence_T2_keys.keys.length &gt; 0) {&amp;#10;            var lastKey = confidence_T2_keys.keys[confidence_T2_keys.keys.length - 1];&amp;#10;            conf_rating = parseInt(lastKey);&amp;#10;        }&amp;#10;    } else {&amp;#10;        // 如果keys是单个值&amp;#10;        conf_rating = parseInt(confidence_T2_keys.keys);&amp;#10;    }&amp;#10;}&amp;#10;&amp;#10;// 获取T1评分的确定性（JavaScript中没有.get()方法，需要手动检查）&amp;#10;var t1_conf = null;&amp;#10;var identity_key = String(thisTrial['identity']);&amp;#10;if (typeof T1_confidence !== 'undefined' &amp;&amp; T1_confidence.hasOwnProperty(identity_key)) {&amp;#10;    t1_conf = T1_confidence[identity_key];&amp;#10;}&amp;#10;&amp;#10;// 计算确定性变化&amp;#10;var conf_change = null;&amp;#10;if (t1_conf !== null &amp;&amp; conf_rating !== null) {&amp;#10;    conf_change = conf_rating - t1_conf;&amp;#10;}&amp;#10;&amp;#10;// 保存数据到实验文件&amp;#10;psychoJS.experiment.addData('confidence_T2', conf_rating);&amp;#10;psychoJS.experiment.addData('confidence_change', conf_change);" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="if confidence_T2_keys.keys:&amp;#10;    conf_rating = int(confidence_T2_keys.keys)&amp;#10;else:&amp;#10;    conf_rating = None&amp;#10;&amp;#10;# 获取T1评分的确定性&amp;#10;t1_conf = T1_confidence.get(str(thisTrial['identity']), None)&amp;#10;&amp;#10;# 计算确定性变化&amp;#10;if t1_conf is not None and conf_rating is not None:&amp;#10;    conf_change = conf_rating - t1_conf&amp;#10;else:&amp;#10;    conf_change = None&amp;#10;&amp;#10;# 保存数据&amp;#10;thisExp.addData('confidence_T2', conf_rating)&amp;#10;thisExp.addData('confidence_change', conf_change)" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="confidence_T2_code" valType="code"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="confidence_1">
+      <TextComponent name="confidence_T1_text">
+        <Param name="color" updates="constant" val="white" valType="color"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="None" valType="str"/>
+        <Param name="font" updates="constant" val="Open Sans" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="num"/>
+        <Param name="name" updates="None" val="confidence_T1_text" valType="code"/>
+        <Param name="opacity" updates="constant" val="" valType="num"/>
+        <Param name="ori" updates="constant" val="0" valType="num"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="list"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="您对刚才的可信度评分有多确定？" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="num"/>
+      </TextComponent>
+      <KeyboardComponent name="confidence_T1_keys">
+        <Param name="allowedKeys" updates="constant" val="'1','2','3','4','5','6','7','8','9'" valType="list"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="confidence_T1_keys" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+      <ImageComponent name="slider_confidence_t1">
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="color"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="image" updates="constant" val="slider.jpg" valType="file"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="mask" updates="constant" val="" valType="str"/>
+        <Param name="name" updates="None" val="slider_confidence_t1" valType="code"/>
+        <Param name="opacity" updates="constant" val="" valType="num"/>
+        <Param name="ori" updates="constant" val="0" valType="num"/>
+        <Param name="pos" updates="constant" val="(0, -0.37)" valType="list"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="size" updates="constant" val="(0.9, 0.1)" valType="list"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="texture resolution" updates="constant" val="128" valType="num"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </ImageComponent>
+      <CodeComponent name="confidence_T1_code">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Both" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="// 处理置信度评分的按键响应&amp;#10;var conf_rating = null;&amp;#10;&amp;#10;if (confidence_T1_keys.keys) {&amp;#10;    if (Array.isArray(confidence_T1_keys.keys)) {&amp;#10;        // 如果keys是数组，取最后一次按键&amp;#10;        if (confidence_T1_keys.keys.length &gt; 0) {&amp;#10;            var lastKey = confidence_T1_keys.keys[confidence_T1_keys.keys.length - 1];&amp;#10;            conf_rating = parseInt(lastKey);&amp;#10;        }&amp;#10;    } else {&amp;#10;        // 如果keys是单个值&amp;#10;        conf_rating = parseInt(confidence_T1_keys.keys);&amp;#10;    }&amp;#10;}&amp;#10;&amp;#10;// 初始化全局字典（如果尚未初始化）&amp;#10;if (typeof T1_confidence === 'undefined') {&amp;#10;    T1_confidence = {};&amp;#10;}&amp;#10;&amp;#10;// 保存确定性评分到全局字典&amp;#10;T1_confidence[String(thisTrial['identity'])] = conf_rating;&amp;#10;&amp;#10;// 保存确定性评分到数据文件&amp;#10;psychoJS.experiment.addData('confidence_T1', conf_rating);" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="if confidence_T1_keys.keys:&amp;#10;    conf_rating = int(confidence_T1_keys.keys)&amp;#10;else:&amp;#10;    conf_rating = None&amp;#10;&amp;#10;# 保存确定性评分&amp;#10;T1_confidence[str(thisTrial['identity'])] = conf_rating&amp;#10;thisExp.addData('confidence_T1', conf_rating)" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="confidence_T1_code" valType="code"/>
+      </CodeComponent>
+    </Routine>
+  </Routines>
+  <Flow>
+    <Routine name="instruction"/>
+    <LoopInitiator loopType="TrialHandler" name="trials">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="None" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="$thisExp.extraInfo['trials_file']" valType="file"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="num"/>
+      <Param name="name" updates="None" val="trials" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="fixation"/>
+    <Routine name="image1"/>
+    <Routine name="confidence_1"/>
+    <Routine name="fixation"/>
+    <Routine name="image2"/>
+    <Routine name="confidence_2"/>
+    <LoopTerminator name="trials"/>
+    <Routine name="end"/>
+  </Flow>
+</PsychoPy2experiment>

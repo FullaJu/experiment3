@@ -1,0 +1,3 @@
+﻿trials.thisRepN,trials.thisTrialN,trials.thisN,trials.thisIndex,condition,gender,high_trust_img,identity,low_trust_img,range,instru_text.started,instru_text.stopped,instru_key_resp.keys,instru_key_resp.rt,instru_key_resp.started,instru_key_resp.stopped,fixation_text.started,fixation_text.stopped,first_image,identity,condition,编号*,session,date,expName,psychopyVersion,frameRate,trials_file,
+,,,,,,,,,,17.411284900001192,None,space,1.5901267000008374,17.411284900001192,None,,,,,,1,001,2025_Jul_24_1636,experiment3_1,2021.2.3,89.77966275305043,data\temp_trials_1.csv,
+,,,,1,,,25,,,,,,,,,19.055921400002262,None,stimuli/0-25-20.jpg,25,1,,,,,,,,
