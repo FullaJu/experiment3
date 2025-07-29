@@ -367,7 +367,7 @@ async function experimentInit() {
     text: '比较愿意',
     font: 'Open Sans',
     units: undefined, 
-    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0.0,
+    pos: [0.225, (- 0.27)], height: 0.02,  wrapWidth: undefined, ori: 0.0,
     color: new util.Color('white'),  opacity: undefined,
     depth: -8.0 
   });
