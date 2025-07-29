@@ -52,10 +52,10 @@ psychoJS.start({
   expName: expName,
   expInfo: expInfo,
   resources: [
-    {'name': 'all_faces.xlsx', 'path': 'all_faces.xlsx'},
     {'name': 'slider.jpg', 'path': 'slider.jpg'},
-    {'name': 'blank.png', 'path': 'blank.png'},
-    {'name': 'all_faces.json', 'path': 'all_faces.json'}
+    {'name': 'all_faces.json', 'path': 'all_faces.json'},
+    {'name': 'all_faces.xlsx', 'path': 'all_faces.xlsx'},
+    {'name': 'blank.png', 'path': 'blank.png'}
   ]
 });
 
