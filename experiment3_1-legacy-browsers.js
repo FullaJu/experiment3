@@ -1245,7 +1245,7 @@ function image1RoutineEnd() {
     }
     
     // 保存评分到全局字典
-    T1_ratings[String(thisTrial['identity'])] = t1_rating;
+    window.T1_ratings[String(thisTrial['identity'])] = t1_rating;
     
     // 保存评分到数据文件
     psychoJS.experiment.addData('rating_T1', t1_rating);
@@ -1466,7 +1466,7 @@ function confidence_1RoutineEnd() {
     }
     
     // 保存确定性评分到全局字典
-    T1_confidence[String(thisTrial['identity'])] = conf_rating;
+    window.T1_confidence[String(thisTrial['identity'])] = conf_rating;
     
     // 保存确定性评分到数据文件
     psychoJS.experiment.addData('confidence_T1', conf_rating);
