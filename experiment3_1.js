@@ -61,8 +61,8 @@ psychoJS.start({
   expInfo: expInfo,
   resources: [
     {'name': 'all_faces.xlsx', 'path': 'all_faces.xlsx'},
-    {'name': 'blank.png', 'path': 'blank.png'},
     {'name': 'slider.jpg', 'path': 'slider.jpg'},
+    {'name': 'blank.png', 'path': 'blank.png'},
     {'name': 'all_faces.json', 'path': 'all_faces.json'}
   ]
 });
@@ -101,21 +101,43 @@ var block_key_resp;
 var fixationClock;
 var fixation_text;
 var image1Clock;
+var img1_instr;
 var image_t1;
 var rating_T1_keys;
 var slider_image;
+var img1_one;
+var img1_three;
+var img1_five;
+var img1_seven;
+var img1_nine;
 var confidence_1Clock;
 var confidence_T1_text;
 var confidence_T1_keys;
 var slider_confidence_t1;
+var con1_one;
+var con1_three;
+var con1_five;
+var con1_seven;
+var con1_nine;
 var image2Clock;
+var img2_instr;
 var image_t2;
 var rating_T2_keys;
 var slider_image_t2;
+var img2_one;
+var img2_three;
+var img2_five;
+var img2_seven;
+var img2_nine;
 var confidence_2Clock;
 var confidence2_text;
 var confidence_T2_keys;
 var slider_confidence_t2;
+var con2_one;
+var con2_three;
+var con2_five;
+var con2_seven;
+var con2_nine;
 var endClock;
 var end_text;
 var end_key_resp;
@@ -127,10 +149,10 @@ async function experimentInit() {
   instru_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'instru_text',
-    text: 'Any text\n\nincluding line breaks',
+    text: '欢迎参加本次实验！\n在实验中，你将扮演某二手交易平台上的买家。在平台上，某些卖家仅提供了个人照片，没有其他个人信息。\n请你卖家的个人照片判断该卖家的可信度，以决定是否愿意与其进行交易（如购买课本、租借物品等）。',
     font: 'Open Sans',
     units: undefined, 
-    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0.0,
+    pos: [0, 0], height: 0.03,  wrapWidth: undefined, ori: 0.0,
     color: new util.Color('white'),  opacity: undefined,
     depth: 0.0 
   });
@@ -271,6 +293,17 @@ async function experimentInit() {
   
   // Initialize components for Routine "image1"
   image1Clock = new util.Clock();
+  img1_instr = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'img1_instr',
+    text: '你愿意与这位卖家进行交易吗？',
+    font: 'Open Sans',
+    units: undefined, 
+    pos: [0, 0], height: 0.03,  wrapWidth: undefined, ori: 0.0,
+    color: new util.Color('white'),  opacity: undefined,
+    depth: -1.0 
+  });
+  
   image_t1 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'image_t1', units : undefined, 
@@ -278,7 +311,7 @@ async function experimentInit() {
     ori : 0.0, pos : [0, 0.1], size : [0.27, 0.37],
     color : new util.Color([1, 1, 1]), opacity : undefined,
     flipHoriz : false, flipVert : false,
-    texRes : 128.0, interpolate : true, depth : -1.0 
+    texRes : 128.0, interpolate : true, depth : -2.0 
   });
   rating_T1_keys = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
@@ -289,8 +322,63 @@ async function experimentInit() {
     ori : 0.0, pos : [0, (- 0.37)], size : [0.9, 0.1],
     color : new util.Color([1, 1, 1]), opacity : undefined,
     flipHoriz : false, flipVert : false,
-    texRes : 128.0, interpolate : true, depth : -3.0 
+    texRes : 128.0, interpolate : true, depth : -4.0 
   });
+  img1_one = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'img1_one',
+    text: '非常不愿意',
+    font: 'Open Sans',
+    units: undefined, 
+    pos: [(- 0.45), (- 0.27)], height: 0.02,  wrapWidth: undefined, ori: 0.0,
+    color: new util.Color('white'),  opacity: undefined,
+    depth: -5.0 
+  });
+  
+  img1_three = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'img1_three',
+    text: '比较不愿意',
+    font: 'Open Sans',
+    units: undefined, 
+    pos: [(- 0.225), (- 0.27)], height: 0.02,  wrapWidth: undefined, ori: 0.0,
+    color: new util.Color('white'),  opacity: undefined,
+    depth: -6.0 
+  });
+  
+  img1_five = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'img1_five',
+    text: '中立',
+    font: 'Open Sans',
+    units: undefined, 
+    pos: [0, (- 0.27)], height: 0.02,  wrapWidth: undefined, ori: 0.0,
+    color: new util.Color('white'),  opacity: undefined,
+    depth: -7.0 
+  });
+  
+  img1_seven = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'img1_seven',
+    text: '比较愿意',
+    font: 'Open Sans',
+    units: undefined, 
+    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0.0,
+    color: new util.Color('white'),  opacity: undefined,
+    depth: -8.0 
+  });
+  
+  img1_nine = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'img1_nine',
+    text: '非常愿意',
+    font: 'Open Sans',
+    units: undefined, 
+    pos: [0.45, (- 0.27)], height: 0.02,  wrapWidth: undefined, ori: 0.0,
+    color: new util.Color('white'),  opacity: undefined,
+    depth: -9.0 
+  });
+  
   // Initialize components for Routine "confidence_1"
   confidence_1Clock = new util.Clock();
   confidence_T1_text = new visual.TextStim({
@@ -315,8 +403,74 @@ async function experimentInit() {
     flipHoriz : false, flipVert : false,
     texRes : 128.0, interpolate : true, depth : -2.0 
   });
+  con1_one = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'con1_one',
+    text: '非常不确定',
+    font: 'Open Sans',
+    units: undefined, 
+    pos: [(- 0.45), (- 0.27)], height: 0.02,  wrapWidth: undefined, ori: 0.0,
+    color: new util.Color('white'),  opacity: undefined,
+    depth: -4.0 
+  });
+  
+  con1_three = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'con1_three',
+    text: '比较不确定',
+    font: 'Open Sans',
+    units: undefined, 
+    pos: [(- 0.225), (- 0.27)], height: 0.02,  wrapWidth: undefined, ori: 0.0,
+    color: new util.Color('white'),  opacity: undefined,
+    depth: -5.0 
+  });
+  
+  con1_five = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'con1_five',
+    text: '中立',
+    font: 'Open Sans',
+    units: undefined, 
+    pos: [0, (- 0.27)], height: 0.02,  wrapWidth: undefined, ori: 0.0,
+    color: new util.Color('white'),  opacity: undefined,
+    depth: -6.0 
+  });
+  
+  con1_seven = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'con1_seven',
+    text: '比较确定',
+    font: 'Open Sans',
+    units: undefined, 
+    pos: [0.225, (- 0.27)], height: 0.02,  wrapWidth: undefined, ori: 0.0,
+    color: new util.Color('white'),  opacity: undefined,
+    depth: -7.0 
+  });
+  
+  con1_nine = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'con1_nine',
+    text: '非常确定',
+    font: 'Open Sans',
+    units: undefined, 
+    pos: [0.45, (- 0.27)], height: 0.02,  wrapWidth: undefined, ori: 0.0,
+    color: new util.Color('white'),  opacity: undefined,
+    depth: -8.0 
+  });
+  
   // Initialize components for Routine "image2"
   image2Clock = new util.Clock();
+  img2_instr = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'img2_instr',
+    text: '你愿意与这位卖家进行交易吗？',
+    font: 'Open Sans',
+    units: undefined, 
+    pos: [0, 0], height: 0.03,  wrapWidth: undefined, ori: 0.0,
+    color: new util.Color('white'),  opacity: undefined,
+    depth: -1.0 
+  });
+  
   image_t2 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'image_t2', units : undefined, 
@@ -324,7 +478,7 @@ async function experimentInit() {
     ori : 0.0, pos : [0, 0.1], size : [0.27, 0.37],
     color : new util.Color([1, 1, 1]), opacity : undefined,
     flipHoriz : false, flipVert : false,
-    texRes : 128.0, interpolate : true, depth : -1.0 
+    texRes : 128.0, interpolate : true, depth : -2.0 
   });
   rating_T2_keys = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
@@ -335,8 +489,63 @@ async function experimentInit() {
     ori : 0.0, pos : [0, (- 0.37)], size : [0.9, 0.1],
     color : new util.Color([1, 1, 1]), opacity : undefined,
     flipHoriz : false, flipVert : false,
-    texRes : 128.0, interpolate : true, depth : -3.0 
+    texRes : 128.0, interpolate : true, depth : -4.0 
   });
+  img2_one = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'img2_one',
+    text: '非常不愿意',
+    font: 'Open Sans',
+    units: undefined, 
+    pos: [(- 0.45), (- 0.27)], height: 0.02,  wrapWidth: undefined, ori: 0.0,
+    color: new util.Color('white'),  opacity: undefined,
+    depth: -5.0 
+  });
+  
+  img2_three = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'img2_three',
+    text: '比较不愿意',
+    font: 'Open Sans',
+    units: undefined, 
+    pos: [(- 0.225), (- 0.27)], height: 0.02,  wrapWidth: undefined, ori: 0.0,
+    color: new util.Color('white'),  opacity: undefined,
+    depth: -6.0 
+  });
+  
+  img2_five = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'img2_five',
+    text: '中立',
+    font: 'Open Sans',
+    units: undefined, 
+    pos: [0, (- 0.27)], height: 0.02,  wrapWidth: undefined, ori: 0.0,
+    color: new util.Color('white'),  opacity: undefined,
+    depth: -7.0 
+  });
+  
+  img2_seven = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'img2_seven',
+    text: '比较愿意',
+    font: 'Open Sans',
+    units: undefined, 
+    pos: [0.225, (- 0.27)], height: 0.02,  wrapWidth: undefined, ori: 0.0,
+    color: new util.Color('white'),  opacity: undefined,
+    depth: -8.0 
+  });
+  
+  img2_nine = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'img2_nine',
+    text: '非常愿意',
+    font: 'Open Sans',
+    units: undefined, 
+    pos: [0.45, (- 0.27)], height: 0.02,  wrapWidth: undefined, ori: 0.0,
+    color: new util.Color('white'),  opacity: undefined,
+    depth: -9.0 
+  });
+  
   // Initialize components for Routine "confidence_2"
   confidence_2Clock = new util.Clock();
   confidence2_text = new visual.TextStim({
@@ -361,6 +570,61 @@ async function experimentInit() {
     flipHoriz : false, flipVert : false,
     texRes : 128.0, interpolate : true, depth : -2.0 
   });
+  con2_one = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'con2_one',
+    text: '非常不确定',
+    font: 'Open Sans',
+    units: undefined, 
+    pos: [(- 0.45), (- 0.27)], height: 0.02,  wrapWidth: undefined, ori: 0.0,
+    color: new util.Color('white'),  opacity: undefined,
+    depth: -4.0 
+  });
+  
+  con2_three = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'con2_three',
+    text: '比较不确定',
+    font: 'Open Sans',
+    units: undefined, 
+    pos: [(- 0.225), (- 0.27)], height: 0.02,  wrapWidth: undefined, ori: 0.0,
+    color: new util.Color('white'),  opacity: undefined,
+    depth: -5.0 
+  });
+  
+  con2_five = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'con2_five',
+    text: '中立',
+    font: 'Open Sans',
+    units: undefined, 
+    pos: [0, (- 0.27)], height: 0.02,  wrapWidth: undefined, ori: 0.0,
+    color: new util.Color('white'),  opacity: undefined,
+    depth: -6.0 
+  });
+  
+  con2_seven = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'con2_seven',
+    text: '比较确定',
+    font: 'Open Sans',
+    units: undefined, 
+    pos: [0.225, (- 0.27)], height: 0.02,  wrapWidth: undefined, ori: 0.0,
+    color: new util.Color('white'),  opacity: undefined,
+    depth: -7.0 
+  });
+  
+  con2_nine = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'con2_nine',
+    text: '非常确定',
+    font: 'Open Sans',
+    units: undefined, 
+    pos: [0.45, (- 0.27)], height: 0.02,  wrapWidth: undefined, ori: 0.0,
+    color: new util.Color('white'),  opacity: undefined,
+    depth: -8.0 
+  });
+  
   // Initialize components for Routine "end"
   endClock = new util.Clock();
   end_text = new visual.TextStim({
@@ -804,9 +1068,15 @@ function image1RoutineBegin(snapshot) {
     _rating_T1_keys_allKeys = [];
     // keep track of which components have finished
     image1Components = [];
+    image1Components.push(img1_instr);
     image1Components.push(image_t1);
     image1Components.push(rating_T1_keys);
     image1Components.push(slider_image);
+    image1Components.push(img1_one);
+    image1Components.push(img1_three);
+    image1Components.push(img1_five);
+    image1Components.push(img1_seven);
+    image1Components.push(img1_nine);
     
     for (const thisComponent of image1Components)
       if ('status' in thisComponent)
@@ -823,6 +1093,16 @@ function image1RoutineEachFrame() {
     t = image1Clock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
+    
+    // *img1_instr* updates
+    if (t >= 0.0 && img1_instr.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      img1_instr.tStart = t;  // (not accounting for frame time here)
+      img1_instr.frameNStart = frameN;  // exact frame index
+      
+      img1_instr.setAutoDraw(true);
+    }
+
     
     // *image_t1* updates
     if (t >= 0.0 && image_t1.status === PsychoJS.Status.NOT_STARTED) {
@@ -865,6 +1145,56 @@ function image1RoutineEachFrame() {
       slider_image.frameNStart = frameN;  // exact frame index
       
       slider_image.setAutoDraw(true);
+    }
+
+    
+    // *img1_one* updates
+    if (t >= 0.0 && img1_one.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      img1_one.tStart = t;  // (not accounting for frame time here)
+      img1_one.frameNStart = frameN;  // exact frame index
+      
+      img1_one.setAutoDraw(true);
+    }
+
+    
+    // *img1_three* updates
+    if (t >= 0.0 && img1_three.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      img1_three.tStart = t;  // (not accounting for frame time here)
+      img1_three.frameNStart = frameN;  // exact frame index
+      
+      img1_three.setAutoDraw(true);
+    }
+
+    
+    // *img1_five* updates
+    if (t >= 0.0 && img1_five.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      img1_five.tStart = t;  // (not accounting for frame time here)
+      img1_five.frameNStart = frameN;  // exact frame index
+      
+      img1_five.setAutoDraw(true);
+    }
+
+    
+    // *img1_seven* updates
+    if (t >= 0.0 && img1_seven.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      img1_seven.tStart = t;  // (not accounting for frame time here)
+      img1_seven.frameNStart = frameN;  // exact frame index
+      
+      img1_seven.setAutoDraw(true);
+    }
+
+    
+    // *img1_nine* updates
+    if (t >= 0.0 && img1_nine.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      img1_nine.tStart = t;  // (not accounting for frame time here)
+      img1_nine.frameNStart = frameN;  // exact frame index
+      
+      img1_nine.setAutoDraw(true);
     }
 
     // check for quit (typically the Esc key)
@@ -953,6 +1283,11 @@ function confidence_1RoutineBegin(snapshot) {
     confidence_1Components.push(confidence_T1_text);
     confidence_1Components.push(confidence_T1_keys);
     confidence_1Components.push(slider_confidence_t1);
+    confidence_1Components.push(con1_one);
+    confidence_1Components.push(con1_three);
+    confidence_1Components.push(con1_five);
+    confidence_1Components.push(con1_seven);
+    confidence_1Components.push(con1_nine);
     
     for (const thisComponent of confidence_1Components)
       if ('status' in thisComponent)
@@ -1011,6 +1346,56 @@ function confidence_1RoutineEachFrame() {
       slider_confidence_t1.frameNStart = frameN;  // exact frame index
       
       slider_confidence_t1.setAutoDraw(true);
+    }
+
+    
+    // *con1_one* updates
+    if (t >= 0.0 && con1_one.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      con1_one.tStart = t;  // (not accounting for frame time here)
+      con1_one.frameNStart = frameN;  // exact frame index
+      
+      con1_one.setAutoDraw(true);
+    }
+
+    
+    // *con1_three* updates
+    if (t >= 0.0 && con1_three.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      con1_three.tStart = t;  // (not accounting for frame time here)
+      con1_three.frameNStart = frameN;  // exact frame index
+      
+      con1_three.setAutoDraw(true);
+    }
+
+    
+    // *con1_five* updates
+    if (t >= 0.0 && con1_five.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      con1_five.tStart = t;  // (not accounting for frame time here)
+      con1_five.frameNStart = frameN;  // exact frame index
+      
+      con1_five.setAutoDraw(true);
+    }
+
+    
+    // *con1_seven* updates
+    if (t >= 0.0 && con1_seven.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      con1_seven.tStart = t;  // (not accounting for frame time here)
+      con1_seven.frameNStart = frameN;  // exact frame index
+      
+      con1_seven.setAutoDraw(true);
+    }
+
+    
+    // *con1_nine* updates
+    if (t >= 0.0 && con1_nine.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      con1_nine.tStart = t;  // (not accounting for frame time here)
+      con1_nine.frameNStart = frameN;  // exact frame index
+      
+      con1_nine.setAutoDraw(true);
     }
 
     // check for quit (typically the Esc key)
@@ -1118,9 +1503,15 @@ function image2RoutineBegin(snapshot) {
     _rating_T2_keys_allKeys = [];
     // keep track of which components have finished
     image2Components = [];
+    image2Components.push(img2_instr);
     image2Components.push(image_t2);
     image2Components.push(rating_T2_keys);
     image2Components.push(slider_image_t2);
+    image2Components.push(img2_one);
+    image2Components.push(img2_three);
+    image2Components.push(img2_five);
+    image2Components.push(img2_seven);
+    image2Components.push(img2_nine);
     
     for (const thisComponent of image2Components)
       if ('status' in thisComponent)
@@ -1137,6 +1528,16 @@ function image2RoutineEachFrame() {
     t = image2Clock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
+    
+    // *img2_instr* updates
+    if (t >= 0.0 && img2_instr.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      img2_instr.tStart = t;  // (not accounting for frame time here)
+      img2_instr.frameNStart = frameN;  // exact frame index
+      
+      img2_instr.setAutoDraw(true);
+    }
+
     
     // *image_t2* updates
     if (t >= 0.0 && image_t2.status === PsychoJS.Status.NOT_STARTED) {
@@ -1179,6 +1580,56 @@ function image2RoutineEachFrame() {
       slider_image_t2.frameNStart = frameN;  // exact frame index
       
       slider_image_t2.setAutoDraw(true);
+    }
+
+    
+    // *img2_one* updates
+    if (t >= 0.0 && img2_one.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      img2_one.tStart = t;  // (not accounting for frame time here)
+      img2_one.frameNStart = frameN;  // exact frame index
+      
+      img2_one.setAutoDraw(true);
+    }
+
+    
+    // *img2_three* updates
+    if (t >= 0.0 && img2_three.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      img2_three.tStart = t;  // (not accounting for frame time here)
+      img2_three.frameNStart = frameN;  // exact frame index
+      
+      img2_three.setAutoDraw(true);
+    }
+
+    
+    // *img2_five* updates
+    if (t >= 0.0 && img2_five.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      img2_five.tStart = t;  // (not accounting for frame time here)
+      img2_five.frameNStart = frameN;  // exact frame index
+      
+      img2_five.setAutoDraw(true);
+    }
+
+    
+    // *img2_seven* updates
+    if (t >= 0.0 && img2_seven.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      img2_seven.tStart = t;  // (not accounting for frame time here)
+      img2_seven.frameNStart = frameN;  // exact frame index
+      
+      img2_seven.setAutoDraw(true);
+    }
+
+    
+    // *img2_nine* updates
+    if (t >= 0.0 && img2_nine.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      img2_nine.tStart = t;  // (not accounting for frame time here)
+      img2_nine.frameNStart = frameN;  // exact frame index
+      
+      img2_nine.setAutoDraw(true);
     }
 
     // check for quit (typically the Esc key)
@@ -1293,6 +1744,11 @@ function confidence_2RoutineBegin(snapshot) {
     confidence_2Components.push(confidence2_text);
     confidence_2Components.push(confidence_T2_keys);
     confidence_2Components.push(slider_confidence_t2);
+    confidence_2Components.push(con2_one);
+    confidence_2Components.push(con2_three);
+    confidence_2Components.push(con2_five);
+    confidence_2Components.push(con2_seven);
+    confidence_2Components.push(con2_nine);
     
     for (const thisComponent of confidence_2Components)
       if ('status' in thisComponent)
@@ -1351,6 +1807,56 @@ function confidence_2RoutineEachFrame() {
       slider_confidence_t2.frameNStart = frameN;  // exact frame index
       
       slider_confidence_t2.setAutoDraw(true);
+    }
+
+    
+    // *con2_one* updates
+    if (t >= 0.0 && con2_one.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      con2_one.tStart = t;  // (not accounting for frame time here)
+      con2_one.frameNStart = frameN;  // exact frame index
+      
+      con2_one.setAutoDraw(true);
+    }
+
+    
+    // *con2_three* updates
+    if (t >= 0.0 && con2_three.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      con2_three.tStart = t;  // (not accounting for frame time here)
+      con2_three.frameNStart = frameN;  // exact frame index
+      
+      con2_three.setAutoDraw(true);
+    }
+
+    
+    // *con2_five* updates
+    if (t >= 0.0 && con2_five.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      con2_five.tStart = t;  // (not accounting for frame time here)
+      con2_five.frameNStart = frameN;  // exact frame index
+      
+      con2_five.setAutoDraw(true);
+    }
+
+    
+    // *con2_seven* updates
+    if (t >= 0.0 && con2_seven.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      con2_seven.tStart = t;  // (not accounting for frame time here)
+      con2_seven.frameNStart = frameN;  // exact frame index
+      
+      con2_seven.setAutoDraw(true);
+    }
+
+    
+    // *con2_nine* updates
+    if (t >= 0.0 && con2_nine.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      con2_nine.tStart = t;  // (not accounting for frame time here)
+      con2_nine.frameNStart = frameN;  // exact frame index
+      
+      con2_nine.setAutoDraw(true);
     }
 
     // check for quit (typically the Esc key)

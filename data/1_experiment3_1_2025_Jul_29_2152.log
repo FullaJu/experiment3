@@ -1,0 +1,140 @@
+0.6656 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+4.9042 	WARNING 	User requested fullscreen with size [1707 1067], but screen is actually [2560, 1600]. Using actual size
+7.0029 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x00000209E2D90668>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x00000209E2DE5D30>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([2560, 1600]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+7.0033 	EXP 	window1: mouseVisible = True
+7.0033 	EXP 	window1: recordFrameIntervals = False
+7.0444 	EXP 	window1: recordFrameIntervals = True
+7.0919 	EXP 	window1: recordFrameIntervals = False
+7.5595 	EXP 	Created instru_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='instru_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Any text\n\nincluding line breaks', units='height', win=Window(...), wrapWidth=1)
+7.6122 	EXP 	Created block_instr_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='block_instr_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='下面是另一位人物', units='height', win=Window(...), wrapWidth=1)
+7.6129 	EXP 	Created fixation_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='fixation_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+7.6173 	EXP 	Created image_t1 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_t1', opacity=1, ori=0.0, pos=array([0. , 0.1]), size=array([0.27, 0.37]), texRes=128.0, units='height', win=Window(...))
+7.6380 	EXP 	Created slider_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, image='slider.jpg', interpolate=True, mask=None, maskParams=None, name='slider_image', opacity=1, ori=0.0, pos=array([ 0.  , -0.37]), size=array([0.9, 0.1]), texRes=128.0, units='height', win=Window(...))
+7.6387 	EXP 	Created fixation_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='fixation_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+7.6643 	EXP 	Created confidence_T1_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='confidence_T1_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='您对刚才的可信度评分有多确定？', units='height', win=Window(...), wrapWidth=1)
+7.6806 	EXP 	Created slider_confidence_t1 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image='slider.jpg', interpolate=True, mask=None, maskParams=None, name='slider_confidence_t1', opacity=1, ori=0.0, pos=array([ 0.  , -0.37]), size=array([0.9, 0.1]), texRes=128.0, units='height', win=Window(...))
+7.6814 	EXP 	Created fixation_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='fixation_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+7.6832 	EXP 	Created image_t2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_t2', opacity=1, ori=0.0, pos=array([0. , 0.1]), size=array([0.27, 0.37]), texRes=128.0, units='height', win=Window(...))
+7.7061 	EXP 	Created slider_image_t2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, image='slider.jpg', interpolate=True, mask=None, maskParams=None, name='slider_image_t2', opacity=1, ori=0.0, pos=array([ 0.  , -0.37]), size=array([0.9, 0.1]), texRes=128.0, units='height', win=Window(...))
+7.7068 	EXP 	Created fixation_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='fixation_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+7.7096 	EXP 	Created confidence2_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='confidence2_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='您对刚才的可信度评分有多确定？', units='height', win=Window(...), wrapWidth=1)
+7.7329 	EXP 	Created slider_confidence_t2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image='slider.jpg', interpolate=True, mask=None, maskParams=None, name='slider_confidence_t2', opacity=1, ori=0.0, pos=array([ 0.  , -0.37]), size=array([0.9, 0.1]), texRes=128.0, units='height', win=Window(...))
+7.7624 	EXP 	Created end_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='end_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='感谢您参与本次研究！请按空格键退出。', units='height', win=Window(...), wrapWidth=1)
+7.7995 	EXP 	instru_text: autoDraw = True
+8.9942 	EXP 	Imported data\temp_trials_1.csv as conditions, 20 conditions, 6 params
+8.9944 	EXP 	Created sequence: random, trialTypes=20, nReps=1, seed=None
+8.9946 	EXP 	New trial (rep=0, index=0): OrderedDict([('condition', 1), ('gender', 'male'), ('high_trust_img', 'stimuli/0-6-11.jpg'), ('identity', 6), ('low_trust_img', 'stimuli/0-6-1.jpg'), ('range', 1.53125)])
+8.9984 	DATA 	Keypress: space
+9.0016 	EXP 	instru_text: autoDraw = False
+9.0016 	EXP 	block_instr_text: autoDraw = True
+10.5770 	DATA 	Keypress: space
+10.5920 	EXP 	block_instr_text: autoDraw = False
+10.5920 	EXP 	fixation_text: autoDraw = True
+11.6229 	EXP 	fixation_text: autoDraw = False
+11.6229 	EXP 	image_t1: image = 'stimuli/0-6-11.jpg'
+11.6229 	EXP 	image_t1: autoDraw = True
+11.6229 	EXP 	slider_image: autoDraw = True
+14.1206 	DATA 	Keypress: 5
+14.1349 	EXP 	image_t1: autoDraw = False
+14.1349 	EXP 	slider_image: autoDraw = False
+14.1349 	EXP 	fixation_text: autoDraw = True
+15.1426 	EXP 	fixation_text: autoDraw = False
+15.1426 	EXP 	confidence_T1_text: autoDraw = True
+15.1426 	EXP 	slider_confidence_t1: autoDraw = True
+17.1802 	DATA 	Keypress: 5
+17.1830 	EXP 	confidence_T1_text: autoDraw = False
+17.1830 	EXP 	slider_confidence_t1: autoDraw = False
+17.1830 	EXP 	fixation_text: autoDraw = True
+18.1917 	EXP 	fixation_text: autoDraw = False
+18.1917 	EXP 	image_t2: image = 'stimuli/0-6-1.jpg'
+18.1917 	EXP 	image_t2: autoDraw = True
+18.1917 	EXP 	slider_image_t2: autoDraw = True
+18.8867 	DATA 	Keypress: 6
+18.9066 	EXP 	image_t2: autoDraw = False
+18.9066 	EXP 	slider_image_t2: autoDraw = False
+18.9066 	EXP 	fixation_text: autoDraw = True
+19.9159 	EXP 	fixation_text: autoDraw = False
+19.9159 	EXP 	confidence2_text: autoDraw = True
+19.9159 	EXP 	slider_confidence_t2: autoDraw = True
+21.6545 	EXP 	New trial (rep=0, index=1): OrderedDict([('condition', 1), ('gender', 'male'), ('high_trust_img', 'stimuli/0-3-4.jpg'), ('identity', 3), ('low_trust_img', 'stimuli/0-3-16.jpg'), ('range', 0.96875)])
+21.6591 	DATA 	Keypress: 7
+21.6637 	EXP 	confidence2_text: autoDraw = False
+21.6637 	EXP 	slider_confidence_t2: autoDraw = False
+21.6637 	EXP 	block_instr_text: autoDraw = True
+23.2909 	DATA 	Keypress: space
+23.3038 	EXP 	block_instr_text: autoDraw = False
+23.3038 	EXP 	fixation_text: autoDraw = True
+24.3134 	EXP 	fixation_text: autoDraw = False
+24.3134 	EXP 	image_t1: image = 'stimuli/0-3-4.jpg'
+24.3134 	EXP 	image_t1: autoDraw = True
+24.3134 	EXP 	slider_image: autoDraw = True
+25.9277 	DATA 	Keypress: 1
+25.9310 	EXP 	image_t1: autoDraw = False
+25.9310 	EXP 	slider_image: autoDraw = False
+25.9310 	EXP 	fixation_text: autoDraw = True
+26.9384 	EXP 	fixation_text: autoDraw = False
+26.9384 	EXP 	confidence_T1_text: autoDraw = True
+26.9384 	EXP 	slider_confidence_t1: autoDraw = True
+27.2951 	DATA 	Keypress: 1
+27.2992 	EXP 	confidence_T1_text: autoDraw = False
+27.2992 	EXP 	slider_confidence_t1: autoDraw = False
+27.2992 	EXP 	fixation_text: autoDraw = True
+28.3060 	EXP 	fixation_text: autoDraw = False
+28.3060 	EXP 	image_t2: image = 'stimuli/0-3-16.jpg'
+28.3060 	EXP 	image_t2: autoDraw = True
+28.3060 	EXP 	slider_image_t2: autoDraw = True
+28.5745 	DATA 	Keypress: 2
+28.5888 	EXP 	image_t2: autoDraw = False
+28.5888 	EXP 	slider_image_t2: autoDraw = False
+28.5888 	EXP 	fixation_text: autoDraw = True
+29.5964 	EXP 	fixation_text: autoDraw = False
+29.5964 	EXP 	confidence2_text: autoDraw = True
+29.5964 	EXP 	slider_confidence_t2: autoDraw = True
+30.7543 	DATA 	Keypress: 2
+30.7616 	EXP 	New trial (rep=0, index=2): OrderedDict([('condition', 2), ('gender', 'female'), ('high_trust_img', 'stimuli/1-7-18.jpg'), ('identity', 7), ('low_trust_img', 'stimuli/1-7-1.jpg'), ('range', 1.46875)])
+30.7678 	EXP 	confidence2_text: autoDraw = False
+30.7678 	EXP 	slider_confidence_t2: autoDraw = False
+30.7678 	EXP 	block_instr_text: autoDraw = True
+32.4446 	DATA 	Keypress: space
+32.4575 	EXP 	block_instr_text: autoDraw = False
+32.4575 	EXP 	fixation_text: autoDraw = True
+33.4745 	EXP 	fixation_text: autoDraw = False
+33.4745 	EXP 	image_t1: image = 'stimuli/1-7-1.jpg'
+33.4745 	EXP 	image_t1: autoDraw = True
+33.4745 	EXP 	slider_image: autoDraw = True
+34.8675 	DATA 	Keypress: 3
+34.8714 	EXP 	image_t1: autoDraw = False
+34.8714 	EXP 	slider_image: autoDraw = False
+34.8714 	EXP 	fixation_text: autoDraw = True
+35.8724 	EXP 	fixation_text: autoDraw = False
+35.8724 	EXP 	confidence_T1_text: autoDraw = True
+35.8724 	EXP 	slider_confidence_t1: autoDraw = True
+36.0989 	DATA 	Keypress: 3
+36.1143 	EXP 	confidence_T1_text: autoDraw = False
+36.1143 	EXP 	slider_confidence_t1: autoDraw = False
+36.1143 	EXP 	fixation_text: autoDraw = True
+37.1237 	EXP 	fixation_text: autoDraw = False
+37.1237 	EXP 	image_t2: image = 'stimuli/1-7-18.jpg'
+37.1237 	EXP 	image_t2: autoDraw = True
+37.1237 	EXP 	slider_image_t2: autoDraw = True
+37.3964 	DATA 	Keypress: 4
+37.4099 	EXP 	image_t2: autoDraw = False
+37.4099 	EXP 	slider_image_t2: autoDraw = False
+37.4099 	EXP 	fixation_text: autoDraw = True
+38.4144 	EXP 	fixation_text: autoDraw = False
+38.4144 	EXP 	confidence2_text: autoDraw = True
+38.4144 	EXP 	slider_confidence_t2: autoDraw = True
+38.6945 	EXP 	New trial (rep=0, index=3): OrderedDict([('condition', 2), ('gender', 'female'), ('high_trust_img', 'stimuli/1-4-13.jpg'), ('identity', 4), ('low_trust_img', 'stimuli/1-4-6.jpg'), ('range', 2.0)])
+38.6985 	DATA 	Keypress: 4
+38.7022 	EXP 	confidence2_text: autoDraw = False
+38.7022 	EXP 	slider_confidence_t2: autoDraw = False
+38.7022 	EXP 	block_instr_text: autoDraw = True
+39.6300 	DATA 	Keypress: space
+39.6434 	EXP 	block_instr_text: autoDraw = False
+39.6434 	EXP 	fixation_text: autoDraw = True
+40.6529 	EXP 	fixation_text: autoDraw = False
+40.6529 	EXP 	image_t1: image = 'stimuli/1-4-6.jpg'
+40.6529 	EXP 	image_t1: autoDraw = True
+40.6529 	EXP 	slider_image: autoDraw = True
+41.4611 	DATA 	Keypress: escape
+43.0299 	EXP 	window1: mouseVisible = True
