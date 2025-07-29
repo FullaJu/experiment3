@@ -93,6 +93,7 @@ async function updateInfo() {
 
 var instructionClock;
 var instru_text;
+var faces_df;
 var trials_data;
 var instru_key_resp;
 var block_instruClock;
@@ -165,7 +166,7 @@ async function experimentInit() {
   var faces_df = []; // 这里应该是您的面孔数据
   
   // 如果使用JSON文件，可以通过以下方式加载：
-  // faces_df = require('all_faces.json'); // 或其他加载方式
+  faces_df = require('all_faces.json'); // 或其他加载方式
   
   // 分离男性和女性面孔
   var male_faces = faces_df.filter(face => face.gender === 'male')
