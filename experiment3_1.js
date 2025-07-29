@@ -255,6 +255,10 @@ async function experimentInit() {
   var T1_ratings = {};
   var T1_confidence = {};
   
+  // 确保变量被添加到全局作用域
+  window.T1_ratings = T1_ratings;
+  window.T1_confidence = T1_confidence;
+  
   // 如果需要创建TrialHandler，可以使用以下方式：
   // var trialHandler = new data.TrialHandler({
   //     trialList: trials_data,
