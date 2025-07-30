@@ -382,7 +382,7 @@ async function experimentInit() {
   
   // 在线上实验中，您可能需要将数据存储在全局变量中而不是文件
   // 设置全局变量供后续使用
-  psychoJS.experiment.extraInfo['trials_data'] = trials_data;
+  psychoJS.experiment.extraInfo['trials_file'] = trials_data;
   
   // 创建全局字典存储评分和确定性
   var T1_ratings = {};
@@ -391,6 +391,9 @@ async function experimentInit() {
   // 确保变量被添加到全局作用域
   window.T1_ratings = T1_ratings;
   window.T1_confidence = T1_confidence;
+  window.trials_data = trials_data;
+  thisExp.extraInfo = thisExp.extraInfo || {};
+  thisExp.extraInfo['trials_file'] = trials_data;
   
   // 如果需要创建TrialHandler，可以使用以下方式：
   // var trialHandler = new data.TrialHandler({
