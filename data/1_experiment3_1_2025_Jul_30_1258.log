@@ -1,0 +1,171 @@
+6.2001 	WARNING 	Font Manager failed to load file C:\WINDOWS\Fonts\方正粗黑宋简体.ttf
+6.2131 	WARNING 	Font Manager failed to load file C:\Windows\Fonts\方正粗黑宋简体.ttf
+6.2258 	WARNING 	Font Manager failed to load file C:\Users\HP\AppData\Local\Microsoft\Windows\Fonts\一定一定要先安装我再打开模板.TTF
+6.5141 	WARNING 	Font Manager failed to load file C:\WINDOWS\Fonts\方正粗黑宋简体.ttf
+6.5378 	WARNING 	Font Manager failed to load file C:\Windows\Fonts\方正粗黑宋简体.ttf
+6.5675 	WARNING 	Font Manager failed to load file C:\Users\HP\AppData\Local\Microsoft\Windows\Fonts\一定一定要先安装我再打开模板.TTF
+12.7559 	WARNING 	User requested fullscreen with size [1707 1067], but screen is actually [2880, 1800]. Using actual size
+20.8957 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000019B31E8CDD8>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x0000019B31DF02E8>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([2880, 1800]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+20.8962 	EXP 	window1: mouseVisible = True
+20.8963 	EXP 	window1: recordFrameIntervals = False
+21.0057 	EXP 	window1: recordFrameIntervals = True
+21.1286 	EXP 	window1: recordFrameIntervals = False
+22.1409 	EXP 	Created instru_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='instru_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+22.2047 	EXP 	Created block_instr_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='block_instr_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='下面是另一位人物\n\n请按空格键继续。', units='height', win=Window(...), wrapWidth=1)
+22.2075 	EXP 	Created fixation_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='fixation_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+22.2217 	EXP 	Created img1_instr = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='img1_instr', opacity=1, ori=0.0, pos=array([ 0.  , -0.15]), rgb=UNKNOWN, text='你愿意与这位卖家进行交易吗？', units='height', win=Window(...), wrapWidth=1)
+22.2296 	EXP 	Created image_t1 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_t1', opacity=1, ori=0.0, pos=array([0. , 0.1]), size=array([0.27, 0.37]), texRes=128.0, units='height', win=Window(...))
+22.2994 	EXP 	Created slider_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, image='slider.jpg', interpolate=True, mask=None, maskParams=None, name='slider_image', opacity=1, ori=0.0, pos=array([ 0.  , -0.37]), size=array([0.9, 0.1]), texRes=128.0, units='height', win=Window(...))
+22.3144 	EXP 	Created img1_one = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-5.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.02, italic=False, languageStyle='LTR', name='img1_one', opacity=1, ori=0.0, pos=array([-0.45, -0.27]), rgb=UNKNOWN, text='非常不愿意', units='height', win=Window(...), wrapWidth=1)
+22.3249 	EXP 	Created img1_three = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-6.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.02, italic=False, languageStyle='LTR', name='img1_three', opacity=1, ori=0.0, pos=array([-0.225, -0.27 ]), rgb=UNKNOWN, text='比较不愿意', units='height', win=Window(...), wrapWidth=1)
+22.3336 	EXP 	Created img1_five = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-7.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.02, italic=False, languageStyle='LTR', name='img1_five', opacity=1, ori=0.0, pos=array([ 0.  , -0.27]), rgb=UNKNOWN, text='中立', units='height', win=Window(...), wrapWidth=1)
+22.3395 	EXP 	Created img1_seven = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-8.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.02, italic=False, languageStyle='LTR', name='img1_seven', opacity=1, ori=0.0, pos=array([ 0.225, -0.27 ]), rgb=UNKNOWN, text='比较愿意', units='height', win=Window(...), wrapWidth=1)
+22.3468 	EXP 	Created img1_nine = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-9.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.02, italic=False, languageStyle='LTR', name='img1_nine', opacity=1, ori=0.0, pos=array([ 0.45, -0.27]), rgb=UNKNOWN, text='非常愿意', units='height', win=Window(...), wrapWidth=1)
+22.3498 	EXP 	Created fixation_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='fixation_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+22.4043 	EXP 	Created confidence_T1_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='confidence_T1_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='您对刚才的可信度评分有多确定？', units='height', win=Window(...), wrapWidth=1)
+22.4713 	EXP 	Created slider_confidence_t1 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image='slider.jpg', interpolate=True, mask=None, maskParams=None, name='slider_confidence_t1', opacity=1, ori=0.0, pos=array([ 0.  , -0.37]), size=array([0.9, 0.1]), texRes=128.0, units='height', win=Window(...))
+22.4792 	EXP 	Created con1_one = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.02, italic=False, languageStyle='LTR', name='con1_one', opacity=1, ori=0.0, pos=array([-0.45, -0.27]), rgb=UNKNOWN, text='非常不确定', units='height', win=Window(...), wrapWidth=1)
+22.4849 	EXP 	Created con1_three = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-5.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.02, italic=False, languageStyle='LTR', name='con1_three', opacity=1, ori=0.0, pos=array([-0.225, -0.27 ]), rgb=UNKNOWN, text='比较不确定', units='height', win=Window(...), wrapWidth=1)
+22.4898 	EXP 	Created con1_five = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-6.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.02, italic=False, languageStyle='LTR', name='con1_five', opacity=1, ori=0.0, pos=array([ 0.  , -0.27]), rgb=UNKNOWN, text='中立', units='height', win=Window(...), wrapWidth=1)
+22.4955 	EXP 	Created con1_seven = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-7.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.02, italic=False, languageStyle='LTR', name='con1_seven', opacity=1, ori=0.0, pos=array([ 0.225, -0.27 ]), rgb=UNKNOWN, text='比较确定', units='height', win=Window(...), wrapWidth=1)
+22.5021 	EXP 	Created con1_nine = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-8.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.02, italic=False, languageStyle='LTR', name='con1_nine', opacity=1, ori=0.0, pos=array([ 0.45, -0.27]), rgb=UNKNOWN, text='非常确定', units='height', win=Window(...), wrapWidth=1)
+22.5049 	EXP 	Created fixation_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='fixation_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+22.5264 	EXP 	Created img2_instr = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='img2_instr', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='你愿意与这位卖家进行交易吗？', units='height', win=Window(...), wrapWidth=1)
+22.5328 	EXP 	Created image_t2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_t2', opacity=1, ori=0.0, pos=array([0. , 0.1]), size=array([0.27, 0.37]), texRes=128.0, units='height', win=Window(...))
+22.5954 	EXP 	Created slider_image_t2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, image='slider.jpg', interpolate=True, mask=None, maskParams=None, name='slider_image_t2', opacity=1, ori=0.0, pos=array([ 0.  , -0.37]), size=array([0.9, 0.1]), texRes=128.0, units='height', win=Window(...))
+22.6011 	EXP 	Created img2_one = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-5.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.02, italic=False, languageStyle='LTR', name='img2_one', opacity=1, ori=0.0, pos=array([-0.45, -0.27]), rgb=UNKNOWN, text='非常不愿意', units='height', win=Window(...), wrapWidth=1)
+22.6069 	EXP 	Created img2_three = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-6.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.02, italic=False, languageStyle='LTR', name='img2_three', opacity=1, ori=0.0, pos=array([-0.225, -0.27 ]), rgb=UNKNOWN, text='比较不愿意', units='height', win=Window(...), wrapWidth=1)
+22.6118 	EXP 	Created img2_five = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-7.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.02, italic=False, languageStyle='LTR', name='img2_five', opacity=1, ori=0.0, pos=array([ 0.  , -0.27]), rgb=UNKNOWN, text='中立', units='height', win=Window(...), wrapWidth=1)
+22.6168 	EXP 	Created img2_seven = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-8.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.02, italic=False, languageStyle='LTR', name='img2_seven', opacity=1, ori=0.0, pos=array([ 0.225, -0.27 ]), rgb=UNKNOWN, text='比较愿意', units='height', win=Window(...), wrapWidth=1)
+22.6228 	EXP 	Created img2_nine = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-9.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.02, italic=False, languageStyle='LTR', name='img2_nine', opacity=1, ori=0.0, pos=array([ 0.45, -0.27]), rgb=UNKNOWN, text='非常愿意', units='height', win=Window(...), wrapWidth=1)
+22.6256 	EXP 	Created fixation_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='fixation_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+22.6392 	EXP 	Created confidence2_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='confidence2_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='您对刚才的可信度评分有多确定？', units='height', win=Window(...), wrapWidth=1)
+22.7090 	EXP 	Created slider_confidence_t2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image='slider.jpg', interpolate=True, mask=None, maskParams=None, name='slider_confidence_t2', opacity=1, ori=0.0, pos=array([ 0.  , -0.37]), size=array([0.9, 0.1]), texRes=128.0, units='height', win=Window(...))
+22.7156 	EXP 	Created con2_one = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.02, italic=False, languageStyle='LTR', name='con2_one', opacity=1, ori=0.0, pos=array([-0.45, -0.27]), rgb=UNKNOWN, text='非常不确定', units='height', win=Window(...), wrapWidth=1)
+22.7221 	EXP 	Created con2_three = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-5.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.02, italic=False, languageStyle='LTR', name='con2_three', opacity=1, ori=0.0, pos=array([-0.225, -0.27 ]), rgb=UNKNOWN, text='比较不确定', units='height', win=Window(...), wrapWidth=1)
+22.7272 	EXP 	Created con2_five = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-6.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.02, italic=False, languageStyle='LTR', name='con2_five', opacity=1, ori=0.0, pos=array([ 0.  , -0.27]), rgb=UNKNOWN, text='中立', units='height', win=Window(...), wrapWidth=1)
+22.7327 	EXP 	Created con2_seven = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-7.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.02, italic=False, languageStyle='LTR', name='con2_seven', opacity=1, ori=0.0, pos=array([ 0.225, -0.27 ]), rgb=UNKNOWN, text='比较确定', units='height', win=Window(...), wrapWidth=1)
+22.7378 	EXP 	Created con2_nine = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-8.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.02, italic=False, languageStyle='LTR', name='con2_nine', opacity=1, ori=0.0, pos=array([ 0.45, -0.27]), rgb=UNKNOWN, text='非常确定', units='height', win=Window(...), wrapWidth=1)
+22.7743 	EXP 	Created end_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='end_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='感谢您参与本次研究！请按空格键退出。', units='height', win=Window(...), wrapWidth=1)
+22.8047 	DATA 	Mouse: Left button down, pos=(1381,806)
+22.8053 	DATA 	Mouse:  Left button up, pos=(1381,806)
+22.8104 	EXP 	instru_text: autoDraw = True
+42.5613 	DATA 	Keypress: space
+42.5862 	EXP 	Imported data\temp_trials_1.csv as conditions, 20 conditions, 6 params
+42.5866 	EXP 	Created sequence: random, trialTypes=20, nReps=1, seed=None
+42.5868 	EXP 	New trial (rep=0, index=0): OrderedDict([('condition', 2), ('gender', 'female'), ('high_trust_img', 'stimuli/1-14-7.jpg'), ('identity', 14), ('low_trust_img', 'stimuli/1-14-10.jpg'), ('range', 0.875)])
+42.5937 	EXP 	instru_text: autoDraw = False
+42.5937 	EXP 	block_instr_text: autoDraw = True
+49.4183 	DATA 	Keypress: space
+49.4338 	EXP 	block_instr_text: autoDraw = False
+49.4338 	EXP 	fixation_text: autoDraw = True
+50.4999 	EXP 	fixation_text: autoDraw = False
+50.4999 	EXP 	fixation_text: autoDraw = False
+50.4999 	EXP 	image_t1: image = 'stimuli/1-14-10.jpg'
+50.4999 	EXP 	img1_instr: autoDraw = True
+50.4999 	EXP 	image_t1: autoDraw = True
+50.4999 	EXP 	slider_image: autoDraw = True
+50.4999 	EXP 	img1_one: autoDraw = True
+50.4999 	EXP 	img1_three: autoDraw = True
+50.4999 	EXP 	img1_five: autoDraw = True
+50.4999 	EXP 	img1_seven: autoDraw = True
+50.4999 	EXP 	img1_nine: autoDraw = True
+61.7111 	DATA 	Keypress: 5
+61.7161 	EXP 	img1_instr: autoDraw = False
+61.7161 	EXP 	image_t1: autoDraw = False
+61.7161 	EXP 	slider_image: autoDraw = False
+61.7161 	EXP 	img1_one: autoDraw = False
+61.7161 	EXP 	img1_three: autoDraw = False
+61.7161 	EXP 	img1_five: autoDraw = False
+61.7161 	EXP 	img1_seven: autoDraw = False
+61.7161 	EXP 	img1_nine: autoDraw = False
+61.7161 	EXP 	fixation_text: autoDraw = True
+62.7213 	EXP 	fixation_text: autoDraw = False
+62.7213 	EXP 	confidence_T1_text: autoDraw = True
+62.7213 	EXP 	slider_confidence_t1: autoDraw = True
+62.7213 	EXP 	con1_one: autoDraw = True
+62.7213 	EXP 	con1_three: autoDraw = True
+62.7213 	EXP 	con1_five: autoDraw = True
+62.7213 	EXP 	con1_seven: autoDraw = True
+62.7213 	EXP 	con1_nine: autoDraw = True
+66.3516 	DATA 	Keypress: 5
+66.3656 	EXP 	confidence_T1_text: autoDraw = False
+66.3656 	EXP 	slider_confidence_t1: autoDraw = False
+66.3656 	EXP 	con1_one: autoDraw = False
+66.3656 	EXP 	con1_three: autoDraw = False
+66.3656 	EXP 	con1_five: autoDraw = False
+66.3656 	EXP 	con1_seven: autoDraw = False
+66.3656 	EXP 	con1_nine: autoDraw = False
+66.3656 	EXP 	fixation_text: autoDraw = True
+67.3869 	EXP 	fixation_text: autoDraw = False
+67.3869 	EXP 	fixation_text: autoDraw = False
+67.3869 	EXP 	image_t2: image = 'stimuli/1-14-7.jpg'
+67.3869 	EXP 	img2_instr: autoDraw = True
+67.3869 	EXP 	image_t2: autoDraw = True
+67.3869 	EXP 	slider_image_t2: autoDraw = True
+67.3869 	EXP 	img2_one: autoDraw = True
+67.3869 	EXP 	img2_three: autoDraw = True
+67.3869 	EXP 	img2_five: autoDraw = True
+67.3869 	EXP 	img2_seven: autoDraw = True
+67.3869 	EXP 	img2_nine: autoDraw = True
+70.4342 	DATA 	Keypress: 5
+70.4493 	EXP 	img2_instr: autoDraw = False
+70.4493 	EXP 	image_t2: autoDraw = False
+70.4493 	EXP 	slider_image_t2: autoDraw = False
+70.4493 	EXP 	img2_one: autoDraw = False
+70.4493 	EXP 	img2_three: autoDraw = False
+70.4493 	EXP 	img2_five: autoDraw = False
+70.4493 	EXP 	img2_seven: autoDraw = False
+70.4493 	EXP 	img2_nine: autoDraw = False
+70.4493 	EXP 	fixation_text: autoDraw = True
+71.4965 	EXP 	fixation_text: autoDraw = False
+71.4965 	EXP 	confidence2_text: autoDraw = True
+71.4965 	EXP 	slider_confidence_t2: autoDraw = True
+71.4965 	EXP 	con2_one: autoDraw = True
+71.4965 	EXP 	con2_three: autoDraw = True
+71.4965 	EXP 	con2_five: autoDraw = True
+71.4965 	EXP 	con2_seven: autoDraw = True
+71.4965 	EXP 	con2_nine: autoDraw = True
+71.9456 	DATA 	Keypress: 5
+71.9664 	EXP 	New trial (rep=0, index=1): OrderedDict([('condition', 1), ('gender', 'male'), ('high_trust_img', 'stimuli/0-17-11.jpg'), ('identity', 17), ('low_trust_img', 'stimuli/0-17-3.jpg'), ('range', 0.6875)])
+71.9813 	EXP 	confidence2_text: autoDraw = False
+71.9813 	EXP 	slider_confidence_t2: autoDraw = False
+71.9813 	EXP 	con2_one: autoDraw = False
+71.9813 	EXP 	con2_three: autoDraw = False
+71.9813 	EXP 	con2_five: autoDraw = False
+71.9813 	EXP 	con2_seven: autoDraw = False
+71.9813 	EXP 	con2_nine: autoDraw = False
+71.9813 	EXP 	block_instr_text: autoDraw = True
+73.5644 	DATA 	Keypress: space
+73.5678 	EXP 	block_instr_text: autoDraw = False
+73.5678 	EXP 	fixation_text: autoDraw = True
+74.6426 	EXP 	fixation_text: autoDraw = False
+74.6426 	EXP 	image_t1: image = 'stimuli/0-17-11.jpg'
+74.6426 	EXP 	img1_instr: autoDraw = True
+74.6426 	EXP 	image_t1: autoDraw = True
+74.6426 	EXP 	slider_image: autoDraw = True
+74.6426 	EXP 	img1_one: autoDraw = True
+74.6426 	EXP 	img1_three: autoDraw = True
+74.6426 	EXP 	img1_five: autoDraw = True
+74.6426 	EXP 	img1_seven: autoDraw = True
+74.6426 	EXP 	img1_nine: autoDraw = True
+76.1388 	DATA 	Keypress: 3
+76.1658 	EXP 	img1_instr: autoDraw = False
+76.1658 	EXP 	image_t1: autoDraw = False
+76.1658 	EXP 	slider_image: autoDraw = False
+76.1658 	EXP 	img1_one: autoDraw = False
+76.1658 	EXP 	img1_three: autoDraw = False
+76.1658 	EXP 	img1_five: autoDraw = False
+76.1658 	EXP 	img1_seven: autoDraw = False
+76.1658 	EXP 	img1_nine: autoDraw = False
+76.1658 	EXP 	fixation_text: autoDraw = True
+77.1674 	EXP 	fixation_text: autoDraw = False
+77.1674 	EXP 	confidence_T1_text: autoDraw = True
+77.1674 	EXP 	slider_confidence_t1: autoDraw = True
+77.1674 	EXP 	con1_one: autoDraw = True
+77.1674 	EXP 	con1_three: autoDraw = True
+77.1674 	EXP 	con1_five: autoDraw = True
+77.1674 	EXP 	con1_seven: autoDraw = True
+77.1674 	EXP 	con1_nine: autoDraw = True
+77.4477 	DATA 	Keypress: escape
+77.6342 	EXP 	window1: mouseVisible = True

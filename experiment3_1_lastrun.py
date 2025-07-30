@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2021.2.3),
-    on 七月 29, 2025, at 21:52
+    on 七月 30, 2025, at 13:05
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -51,7 +51,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['编号*'], expName, 
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='D:\\prograduate\\2xia\\experiment3_1\\experiment3_1\\experiment3_1_lastrun.py',
+    originPath='D:\\postgraduate\\2xia\\experiment3\\experiment3_1_2\\experiment3_1\\experiment3_1_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -86,9 +86,9 @@ defaultKeyboard = keyboard.Keyboard()
 # Initialize components for Routine "instruction"
 instructionClock = core.Clock()
 instru_text = visual.TextStim(win=win, name='instru_text',
-    text='Any text\n\nincluding line breaks',
+    text='欢迎参加本次实验！\n在实验中，你将扮演某二手交易平台上的买家。\n平台会给您提供某些卖家的个人照片。\n请你根据卖家的个人照片判断该卖家的可信度，\n以决定是否愿意与其进行交易（如购买课本、租借物品等）。\n\n请按空格键继续。',
     font='Open Sans',
-    pos=(0, 0), height=0.1, wrapWidth=None, ori=0.0, 
+    pos=(0, 0), height=0.03, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=0.0);
@@ -173,9 +173,9 @@ instru_key_resp = keyboard.Keyboard()
 # Initialize components for Routine "block_instru"
 block_instruClock = core.Clock()
 block_instr_text = visual.TextStim(win=win, name='block_instr_text',
-    text='下面是另一位人物',
+    text='接下来是其中一位卖家的照片，\n请您判断是否愿意与其进行交易。\n\n请按空格键继续。',
     font='Open Sans',
-    pos=(0, 0), height=0.1, wrapWidth=None, ori=0.0, 
+    pos=(0, 0), height=0.03, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=0.0);
@@ -193,6 +193,13 @@ fixation_text = visual.TextStim(win=win, name='fixation_text',
 
 # Initialize components for Routine "image1"
 image1Clock = core.Clock()
+img1_instr = visual.TextStim(win=win, name='img1_instr',
+    text='你愿意与这位卖家进行交易吗？',
+    font='Open Sans',
+    pos=(0, -0.15), height=0.03, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-1.0);
 image_t1 = visual.ImageStim(
     win=win,
     name='image_t1', 
@@ -200,7 +207,7 @@ image_t1 = visual.ImageStim(
     ori=0.0, pos=(0, 0.1), size=(0.27, 0.37),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-1.0)
+    texRes=128.0, interpolate=True, depth=-2.0)
 rating_T1_keys = keyboard.Keyboard()
 slider_image = visual.ImageStim(
     win=win,
@@ -209,7 +216,42 @@ slider_image = visual.ImageStim(
     ori=0.0, pos=(0, -0.37), size=(0.9, 0.1),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-3.0)
+    texRes=128.0, interpolate=True, depth=-4.0)
+img1_one = visual.TextStim(win=win, name='img1_one',
+    text='非常不愿意',
+    font='Open Sans',
+    pos=(-0.45, -0.27), height=0.02, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-5.0);
+img1_three = visual.TextStim(win=win, name='img1_three',
+    text='比较不愿意',
+    font='Open Sans',
+    pos=(-0.225, -0.27), height=0.02, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-6.0);
+img1_five = visual.TextStim(win=win, name='img1_five',
+    text='中立',
+    font='Open Sans',
+    pos=(0, -0.27), height=0.02, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-7.0);
+img1_seven = visual.TextStim(win=win, name='img1_seven',
+    text='比较愿意',
+    font='Open Sans',
+    pos=(0.225, -0.27), height=0.02, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-8.0);
+img1_nine = visual.TextStim(win=win, name='img1_nine',
+    text='非常愿意',
+    font='Open Sans',
+    pos=(0.45, -0.27), height=0.02, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-9.0);
 
 # Initialize components for Routine "fixation"
 fixationClock = core.Clock()
@@ -226,7 +268,7 @@ confidence_1Clock = core.Clock()
 confidence_T1_text = visual.TextStim(win=win, name='confidence_T1_text',
     text='您对刚才的可信度评分有多确定？',
     font='Open Sans',
-    pos=(0, 0), height=0.1, wrapWidth=None, ori=0.0, 
+    pos=(0, 0), height=0.03, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=0.0);
@@ -239,6 +281,41 @@ slider_confidence_t1 = visual.ImageStim(
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
     texRes=128.0, interpolate=True, depth=-2.0)
+con1_one = visual.TextStim(win=win, name='con1_one',
+    text='非常不确定',
+    font='Open Sans',
+    pos=(-0.45, -0.27), height=0.02, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-4.0);
+con1_three = visual.TextStim(win=win, name='con1_three',
+    text='比较不确定',
+    font='Open Sans',
+    pos=(-0.225, -0.27), height=0.02, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-5.0);
+con1_five = visual.TextStim(win=win, name='con1_five',
+    text='中立',
+    font='Open Sans',
+    pos=(0, -0.27), height=0.02, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-6.0);
+con1_seven = visual.TextStim(win=win, name='con1_seven',
+    text='比较确定',
+    font='Open Sans',
+    pos=(0.225, -0.27), height=0.02, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-7.0);
+con1_nine = visual.TextStim(win=win, name='con1_nine',
+    text='非常确定',
+    font='Open Sans',
+    pos=(0.45, -0.27), height=0.02, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-8.0);
 
 # Initialize components for Routine "fixation"
 fixationClock = core.Clock()
@@ -252,6 +329,13 @@ fixation_text = visual.TextStim(win=win, name='fixation_text',
 
 # Initialize components for Routine "image2"
 image2Clock = core.Clock()
+img2_instr = visual.TextStim(win=win, name='img2_instr',
+    text='你愿意与这位卖家进行交易吗？',
+    font='Open Sans',
+    pos=(0, -0.15), height=0.03, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-1.0);
 image_t2 = visual.ImageStim(
     win=win,
     name='image_t2', 
@@ -259,7 +343,7 @@ image_t2 = visual.ImageStim(
     ori=0.0, pos=(0, 0.1), size=(0.27, 0.37),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-1.0)
+    texRes=128.0, interpolate=True, depth=-2.0)
 rating_T2_keys = keyboard.Keyboard()
 slider_image_t2 = visual.ImageStim(
     win=win,
@@ -268,7 +352,42 @@ slider_image_t2 = visual.ImageStim(
     ori=0.0, pos=(0, -0.37), size=(0.9, 0.1),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-3.0)
+    texRes=128.0, interpolate=True, depth=-4.0)
+img2_one = visual.TextStim(win=win, name='img2_one',
+    text='非常不愿意',
+    font='Open Sans',
+    pos=(-0.45, -0.27), height=0.02, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-5.0);
+img2_three = visual.TextStim(win=win, name='img2_three',
+    text='比较不愿意',
+    font='Open Sans',
+    pos=(-0.225, -0.27), height=0.02, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-6.0);
+img2_five = visual.TextStim(win=win, name='img2_five',
+    text='中立',
+    font='Open Sans',
+    pos=(0, -0.27), height=0.02, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-7.0);
+img2_seven = visual.TextStim(win=win, name='img2_seven',
+    text='比较愿意',
+    font='Open Sans',
+    pos=(0.225, -0.27), height=0.02, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-8.0);
+img2_nine = visual.TextStim(win=win, name='img2_nine',
+    text='非常愿意',
+    font='Open Sans',
+    pos=(0.45, -0.27), height=0.02, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-9.0);
 
 # Initialize components for Routine "fixation"
 fixationClock = core.Clock()
@@ -285,7 +404,7 @@ confidence_2Clock = core.Clock()
 confidence2_text = visual.TextStim(win=win, name='confidence2_text',
     text='您对刚才的可信度评分有多确定？',
     font='Open Sans',
-    pos=(0, 0), height=0.1, wrapWidth=None, ori=0.0, 
+    pos=(0, 0), height=0.03, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=0.0);
@@ -298,13 +417,48 @@ slider_confidence_t2 = visual.ImageStim(
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
     texRes=128.0, interpolate=True, depth=-2.0)
+con2_one = visual.TextStim(win=win, name='con2_one',
+    text='非常不确定',
+    font='Open Sans',
+    pos=(-0.45, -0.27), height=0.02, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-4.0);
+con2_three = visual.TextStim(win=win, name='con2_three',
+    text='比较不确定',
+    font='Open Sans',
+    pos=(-0.225, -0.27), height=0.02, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-5.0);
+con2_five = visual.TextStim(win=win, name='con2_five',
+    text='中立',
+    font='Open Sans',
+    pos=(0, -0.27), height=0.02, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-6.0);
+con2_seven = visual.TextStim(win=win, name='con2_seven',
+    text='比较确定',
+    font='Open Sans',
+    pos=(0.225, -0.27), height=0.02, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-7.0);
+con2_nine = visual.TextStim(win=win, name='con2_nine',
+    text='非常确定',
+    font='Open Sans',
+    pos=(0.45, -0.27), height=0.02, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-8.0);
 
 # Initialize components for Routine "end"
 endClock = core.Clock()
 end_text = visual.TextStim(win=win, name='end_text',
     text='感谢您参与本次研究！请按空格键退出。',
     font='Open Sans',
-    pos=(0, 0), height=0.1, wrapWidth=None, ori=0.0, 
+    pos=(0, 0), height=0.03, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=0.0);
@@ -612,7 +766,7 @@ for thisTrial in trials:
     rating_T1_keys.rt = []
     _rating_T1_keys_allKeys = []
     # keep track of which components have finished
-    image1Components = [image_t1, rating_T1_keys, slider_image]
+    image1Components = [img1_instr, image_t1, rating_T1_keys, slider_image, img1_one, img1_three, img1_five, img1_seven, img1_nine]
     for thisComponent in image1Components:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -634,6 +788,15 @@ for thisTrial in trials:
         tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
+        
+        # *img1_instr* updates
+        if img1_instr.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            img1_instr.frameNStart = frameN  # exact frame index
+            img1_instr.tStart = t  # local t and not account for scr refresh
+            img1_instr.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(img1_instr, 'tStartRefresh')  # time at next scr refresh
+            img1_instr.setAutoDraw(True)
         
         # *image_t1* updates
         if image_t1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
@@ -675,6 +838,51 @@ for thisTrial in trials:
             win.timeOnFlip(slider_image, 'tStartRefresh')  # time at next scr refresh
             slider_image.setAutoDraw(True)
         
+        # *img1_one* updates
+        if img1_one.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            img1_one.frameNStart = frameN  # exact frame index
+            img1_one.tStart = t  # local t and not account for scr refresh
+            img1_one.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(img1_one, 'tStartRefresh')  # time at next scr refresh
+            img1_one.setAutoDraw(True)
+        
+        # *img1_three* updates
+        if img1_three.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            img1_three.frameNStart = frameN  # exact frame index
+            img1_three.tStart = t  # local t and not account for scr refresh
+            img1_three.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(img1_three, 'tStartRefresh')  # time at next scr refresh
+            img1_three.setAutoDraw(True)
+        
+        # *img1_five* updates
+        if img1_five.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            img1_five.frameNStart = frameN  # exact frame index
+            img1_five.tStart = t  # local t and not account for scr refresh
+            img1_five.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(img1_five, 'tStartRefresh')  # time at next scr refresh
+            img1_five.setAutoDraw(True)
+        
+        # *img1_seven* updates
+        if img1_seven.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            img1_seven.frameNStart = frameN  # exact frame index
+            img1_seven.tStart = t  # local t and not account for scr refresh
+            img1_seven.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(img1_seven, 'tStartRefresh')  # time at next scr refresh
+            img1_seven.setAutoDraw(True)
+        
+        # *img1_nine* updates
+        if img1_nine.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            img1_nine.frameNStart = frameN  # exact frame index
+            img1_nine.tStart = t  # local t and not account for scr refresh
+            img1_nine.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(img1_nine, 'tStartRefresh')  # time at next scr refresh
+            img1_nine.setAutoDraw(True)
+        
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
             core.quit()
@@ -707,6 +915,8 @@ for thisTrial in trials:
     
     # 保存评分到数据文件
     thisExp.addData('rating_T1', t1_rating)
+    trials.addData('img1_instr.started', img1_instr.tStartRefresh)
+    trials.addData('img1_instr.stopped', img1_instr.tStopRefresh)
     trials.addData('image_t1.started', image_t1.tStartRefresh)
     trials.addData('image_t1.stopped', image_t1.tStopRefresh)
     # check responses
@@ -719,6 +929,16 @@ for thisTrial in trials:
     trials.addData('rating_T1_keys.stopped', rating_T1_keys.tStopRefresh)
     trials.addData('slider_image.started', slider_image.tStartRefresh)
     trials.addData('slider_image.stopped', slider_image.tStopRefresh)
+    trials.addData('img1_one.started', img1_one.tStartRefresh)
+    trials.addData('img1_one.stopped', img1_one.tStopRefresh)
+    trials.addData('img1_three.started', img1_three.tStartRefresh)
+    trials.addData('img1_three.stopped', img1_three.tStopRefresh)
+    trials.addData('img1_five.started', img1_five.tStartRefresh)
+    trials.addData('img1_five.stopped', img1_five.tStopRefresh)
+    trials.addData('img1_seven.started', img1_seven.tStartRefresh)
+    trials.addData('img1_seven.stopped', img1_seven.tStopRefresh)
+    trials.addData('img1_nine.started', img1_nine.tStartRefresh)
+    trials.addData('img1_nine.stopped', img1_nine.tStopRefresh)
     # the Routine "image1" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -798,7 +1018,7 @@ for thisTrial in trials:
     confidence_T1_keys.rt = []
     _confidence_T1_keys_allKeys = []
     # keep track of which components have finished
-    confidence_1Components = [confidence_T1_text, confidence_T1_keys, slider_confidence_t1]
+    confidence_1Components = [confidence_T1_text, confidence_T1_keys, slider_confidence_t1, con1_one, con1_three, con1_five, con1_seven, con1_nine]
     for thisComponent in confidence_1Components:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -861,6 +1081,51 @@ for thisTrial in trials:
             win.timeOnFlip(slider_confidence_t1, 'tStartRefresh')  # time at next scr refresh
             slider_confidence_t1.setAutoDraw(True)
         
+        # *con1_one* updates
+        if con1_one.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            con1_one.frameNStart = frameN  # exact frame index
+            con1_one.tStart = t  # local t and not account for scr refresh
+            con1_one.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(con1_one, 'tStartRefresh')  # time at next scr refresh
+            con1_one.setAutoDraw(True)
+        
+        # *con1_three* updates
+        if con1_three.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            con1_three.frameNStart = frameN  # exact frame index
+            con1_three.tStart = t  # local t and not account for scr refresh
+            con1_three.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(con1_three, 'tStartRefresh')  # time at next scr refresh
+            con1_three.setAutoDraw(True)
+        
+        # *con1_five* updates
+        if con1_five.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            con1_five.frameNStart = frameN  # exact frame index
+            con1_five.tStart = t  # local t and not account for scr refresh
+            con1_five.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(con1_five, 'tStartRefresh')  # time at next scr refresh
+            con1_five.setAutoDraw(True)
+        
+        # *con1_seven* updates
+        if con1_seven.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            con1_seven.frameNStart = frameN  # exact frame index
+            con1_seven.tStart = t  # local t and not account for scr refresh
+            con1_seven.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(con1_seven, 'tStartRefresh')  # time at next scr refresh
+            con1_seven.setAutoDraw(True)
+        
+        # *con1_nine* updates
+        if con1_nine.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            con1_nine.frameNStart = frameN  # exact frame index
+            con1_nine.tStart = t  # local t and not account for scr refresh
+            con1_nine.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(con1_nine, 'tStartRefresh')  # time at next scr refresh
+            con1_nine.setAutoDraw(True)
+        
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
             core.quit()
@@ -902,6 +1167,16 @@ for thisTrial in trials:
     # 保存确定性评分
     T1_confidence[str(thisTrial['identity'])] = conf_rating
     thisExp.addData('confidence_T1', conf_rating)
+    trials.addData('con1_one.started', con1_one.tStartRefresh)
+    trials.addData('con1_one.stopped', con1_one.tStopRefresh)
+    trials.addData('con1_three.started', con1_three.tStartRefresh)
+    trials.addData('con1_three.stopped', con1_three.tStopRefresh)
+    trials.addData('con1_five.started', con1_five.tStartRefresh)
+    trials.addData('con1_five.stopped', con1_five.tStopRefresh)
+    trials.addData('con1_seven.started', con1_seven.tStartRefresh)
+    trials.addData('con1_seven.stopped', con1_seven.tStopRefresh)
+    trials.addData('con1_nine.started', con1_nine.tStartRefresh)
+    trials.addData('con1_nine.stopped', con1_nine.tStopRefresh)
     # the Routine "confidence_1" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -993,7 +1268,7 @@ for thisTrial in trials:
     rating_T2_keys.rt = []
     _rating_T2_keys_allKeys = []
     # keep track of which components have finished
-    image2Components = [image_t2, rating_T2_keys, slider_image_t2]
+    image2Components = [img2_instr, image_t2, rating_T2_keys, slider_image_t2, img2_one, img2_three, img2_five, img2_seven, img2_nine]
     for thisComponent in image2Components:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -1015,6 +1290,15 @@ for thisTrial in trials:
         tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
+        
+        # *img2_instr* updates
+        if img2_instr.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            img2_instr.frameNStart = frameN  # exact frame index
+            img2_instr.tStart = t  # local t and not account for scr refresh
+            img2_instr.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(img2_instr, 'tStartRefresh')  # time at next scr refresh
+            img2_instr.setAutoDraw(True)
         
         # *image_t2* updates
         if image_t2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
@@ -1056,6 +1340,51 @@ for thisTrial in trials:
             win.timeOnFlip(slider_image_t2, 'tStartRefresh')  # time at next scr refresh
             slider_image_t2.setAutoDraw(True)
         
+        # *img2_one* updates
+        if img2_one.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            img2_one.frameNStart = frameN  # exact frame index
+            img2_one.tStart = t  # local t and not account for scr refresh
+            img2_one.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(img2_one, 'tStartRefresh')  # time at next scr refresh
+            img2_one.setAutoDraw(True)
+        
+        # *img2_three* updates
+        if img2_three.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            img2_three.frameNStart = frameN  # exact frame index
+            img2_three.tStart = t  # local t and not account for scr refresh
+            img2_three.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(img2_three, 'tStartRefresh')  # time at next scr refresh
+            img2_three.setAutoDraw(True)
+        
+        # *img2_five* updates
+        if img2_five.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            img2_five.frameNStart = frameN  # exact frame index
+            img2_five.tStart = t  # local t and not account for scr refresh
+            img2_five.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(img2_five, 'tStartRefresh')  # time at next scr refresh
+            img2_five.setAutoDraw(True)
+        
+        # *img2_seven* updates
+        if img2_seven.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            img2_seven.frameNStart = frameN  # exact frame index
+            img2_seven.tStart = t  # local t and not account for scr refresh
+            img2_seven.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(img2_seven, 'tStartRefresh')  # time at next scr refresh
+            img2_seven.setAutoDraw(True)
+        
+        # *img2_nine* updates
+        if img2_nine.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            img2_nine.frameNStart = frameN  # exact frame index
+            img2_nine.tStart = t  # local t and not account for scr refresh
+            img2_nine.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(img2_nine, 'tStartRefresh')  # time at next scr refresh
+            img2_nine.setAutoDraw(True)
+        
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
             core.quit()
@@ -1096,6 +1425,8 @@ for thisTrial in trials:
     # 保存数据
     thisExp.addData('rating_T2', t2_rating)
     thisExp.addData('rating_change', rating_change)
+    trials.addData('img2_instr.started', img2_instr.tStartRefresh)
+    trials.addData('img2_instr.stopped', img2_instr.tStopRefresh)
     trials.addData('image_t2.started', image_t2.tStartRefresh)
     trials.addData('image_t2.stopped', image_t2.tStopRefresh)
     # check responses
@@ -1108,6 +1439,16 @@ for thisTrial in trials:
     trials.addData('rating_T2_keys.stopped', rating_T2_keys.tStopRefresh)
     trials.addData('slider_image_t2.started', slider_image_t2.tStartRefresh)
     trials.addData('slider_image_t2.stopped', slider_image_t2.tStopRefresh)
+    trials.addData('img2_one.started', img2_one.tStartRefresh)
+    trials.addData('img2_one.stopped', img2_one.tStopRefresh)
+    trials.addData('img2_three.started', img2_three.tStartRefresh)
+    trials.addData('img2_three.stopped', img2_three.tStopRefresh)
+    trials.addData('img2_five.started', img2_five.tStartRefresh)
+    trials.addData('img2_five.stopped', img2_five.tStopRefresh)
+    trials.addData('img2_seven.started', img2_seven.tStartRefresh)
+    trials.addData('img2_seven.stopped', img2_seven.tStopRefresh)
+    trials.addData('img2_nine.started', img2_nine.tStartRefresh)
+    trials.addData('img2_nine.stopped', img2_nine.tStopRefresh)
     # the Routine "image2" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -1187,7 +1528,7 @@ for thisTrial in trials:
     confidence_T2_keys.rt = []
     _confidence_T2_keys_allKeys = []
     # keep track of which components have finished
-    confidence_2Components = [confidence2_text, confidence_T2_keys, slider_confidence_t2]
+    confidence_2Components = [confidence2_text, confidence_T2_keys, slider_confidence_t2, con2_one, con2_three, con2_five, con2_seven, con2_nine]
     for thisComponent in confidence_2Components:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -1250,6 +1591,51 @@ for thisTrial in trials:
             win.timeOnFlip(slider_confidence_t2, 'tStartRefresh')  # time at next scr refresh
             slider_confidence_t2.setAutoDraw(True)
         
+        # *con2_one* updates
+        if con2_one.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            con2_one.frameNStart = frameN  # exact frame index
+            con2_one.tStart = t  # local t and not account for scr refresh
+            con2_one.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(con2_one, 'tStartRefresh')  # time at next scr refresh
+            con2_one.setAutoDraw(True)
+        
+        # *con2_three* updates
+        if con2_three.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            con2_three.frameNStart = frameN  # exact frame index
+            con2_three.tStart = t  # local t and not account for scr refresh
+            con2_three.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(con2_three, 'tStartRefresh')  # time at next scr refresh
+            con2_three.setAutoDraw(True)
+        
+        # *con2_five* updates
+        if con2_five.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            con2_five.frameNStart = frameN  # exact frame index
+            con2_five.tStart = t  # local t and not account for scr refresh
+            con2_five.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(con2_five, 'tStartRefresh')  # time at next scr refresh
+            con2_five.setAutoDraw(True)
+        
+        # *con2_seven* updates
+        if con2_seven.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            con2_seven.frameNStart = frameN  # exact frame index
+            con2_seven.tStart = t  # local t and not account for scr refresh
+            con2_seven.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(con2_seven, 'tStartRefresh')  # time at next scr refresh
+            con2_seven.setAutoDraw(True)
+        
+        # *con2_nine* updates
+        if con2_nine.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            con2_nine.frameNStart = frameN  # exact frame index
+            con2_nine.tStart = t  # local t and not account for scr refresh
+            con2_nine.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(con2_nine, 'tStartRefresh')  # time at next scr refresh
+            con2_nine.setAutoDraw(True)
+        
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
             core.quit()
@@ -1300,6 +1686,16 @@ for thisTrial in trials:
     # 保存数据
     thisExp.addData('confidence_T2', conf_rating)
     thisExp.addData('confidence_change', conf_change)
+    trials.addData('con2_one.started', con2_one.tStartRefresh)
+    trials.addData('con2_one.stopped', con2_one.tStopRefresh)
+    trials.addData('con2_three.started', con2_three.tStartRefresh)
+    trials.addData('con2_three.stopped', con2_three.tStopRefresh)
+    trials.addData('con2_five.started', con2_five.tStartRefresh)
+    trials.addData('con2_five.stopped', con2_five.tStopRefresh)
+    trials.addData('con2_seven.started', con2_seven.tStartRefresh)
+    trials.addData('con2_seven.stopped', con2_seven.tStopRefresh)
+    trials.addData('con2_nine.started', con2_nine.tStartRefresh)
+    trials.addData('con2_nine.stopped', con2_nine.tStopRefresh)
     # the Routine "confidence_2" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     thisExp.nextEntry()
