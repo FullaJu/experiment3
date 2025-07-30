@@ -644,8 +644,7 @@ async function experimentInit() {
   window.T1_ratings = T1_ratings;
   window.T1_confidence = T1_confidence;
   window.trials_data = trials_data;
-  thisExp.extraInfo = thisExp.extraInfo || {};
-  thisExp.extraInfo['trials_file'] = trials_data;
+  
   
   // 如果需要创建TrialHandler，可以使用以下方式：
   // var trialHandler = new data.TrialHandler({
