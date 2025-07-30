@@ -394,6 +394,8 @@ async function experimentInit() {
   // 初始化全局变量
   var current_img = "blank.png";
   
+  var thisExp = psychoJS.experiment;
+  
   // 读取刺激列表 - 在线上实验中，您需要确保Excel文件已转换为JSON格式
   // 假设您已经将all_faces.xlsx转换为JSON格式并通过资源加载
   var faces_df = []; // 这里应该是您的面孔数据
