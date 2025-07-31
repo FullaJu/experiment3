@@ -406,9 +406,7 @@ async function experimentInit() {
   
   // 读取刺激列表 - 在线上实验中，您需要确保Excel文件已转换为JSON格式
   // 假设您已经将all_faces.xlsx转换为JSON格式并通过资源加载
-  var faces_df = []; // 这里应该是您的面孔数据
-  
-  window.faces_df = [
+  var faces_df = [
       {
           "identity": 6,
           "gender": "male",
@@ -557,6 +555,9 @@ async function experimentInit() {
                           .sort((a, b) => b.range - a.range); // 按range降序排列
   var female_faces = faces_df.filter(face => face.gender === 'female')
                             .sort((a, b) => b.range - a.range); // 按range降序排列
+  
+  // 存储到全局变量
+  window.faces_df = faces_df;
   
   // 获取参与者编号
   var participant_id = parseInt(expInfo["编号*"]);
