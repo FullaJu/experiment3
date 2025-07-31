@@ -645,7 +645,7 @@ async function experimentInit() {
   window.T1_ratings = T1_ratings;
   window.T1_confidence = T1_confidence;
   window.trials_data = trials_data;
-  
+  trials_data = window.trials_data;
   
   // 如果需要创建TrialHandler，可以使用以下方式：
   // var trialHandler = new data.TrialHandler({
@@ -1173,7 +1173,7 @@ function trialsLoopBegin(trialsLoopScheduler, snapshot) {
       psychoJS: psychoJS,
       nReps: 1, method: TrialHandler.Method.RANDOM,
       extraInfo: expInfo, originPath: undefined,
-      trialList: trials_data,
+      trialList: window.trials_data,
       seed: undefined, name: 'trials'
     });
     psychoJS.experiment.addLoop(trials); // add the loop to the experiment
